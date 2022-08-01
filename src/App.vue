@@ -1,30 +1,40 @@
 <template>
-
   <div :class="$style.app">
     <h2 :class="$style.title">Список приоритетных условий, при покупке квартиры.</h2>
 
-
-<!--    <form @submit.prevent="sendForm">-->
-
-<!--    </form>-->
     <List/>
 
-    <CardDeveloper/>
+    <form :class="$style.wrapper" @submit.prevent="generatePDF">
+      <CardDeveloper/>
+      <button type="submit">Сформировать pdf</button>
+    </form>
   </div>
-
 </template>
 
 <script lang="ts" setup>
+import { reactive } from "vue";
 import CardDeveloper from '@/components/CardDeveloper.vue';
 import List from './components/List.vue';
-import { jsPDF } from "jspdf";
+import { doc } from '@/utils/generatePDF'
 
-// Default export is a4 paper, portrait, using millimeters for units
-// const doc = new jsPDF();
-//
-// doc.text("Hello world!", 10, 10);
-// doc.save("a4.pdf");
+const dataForm = reactive({
+
+  developerName:'', // название застройщика
+  urlDeveloperName:'', // ссылка на застройщика или их предлжения
+  commentsDeveloper:'', // комментарий о застройщике
+  maximumApartmentAmount:'', // максимальная сумма квартиры
+  interestRate:'', // процентная ставка
+  downPayment:'', // первоначальный взнос
+  overpayment:'', // переплата
+})
+
+const generatePDF = () => {
+  console.log('generate-pdf')
+  doc.text("Hello world!", 10, 10);
+  doc.save("a4.pdf");
+}
 </script>
+
 <style module>
 .title {
   margin-top: 15px;
@@ -34,5 +44,11 @@ import { jsPDF } from "jspdf";
 .app {
   max-width: 920px;
   margin: 0 auto;
+}
+
+.wrapper {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
 }
 </style>

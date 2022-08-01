@@ -5,7 +5,7 @@
     <div style="display: flex; justify-content: space-between">
       <div>
         <label>
-          <input type='checkbox' :class="$style.input">
+          <input  type='checkbox' :class="$style.input">
           <span>title</span>
         </label>
       </div>

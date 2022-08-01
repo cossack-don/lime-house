@@ -1,7 +1,6 @@
 <template>
 <div :class="$style.wrapper">
 
-
     <div :class="$style.leftPart">
       <label :class="[$style.label, $style.halfWidth]">
         Название застройщика
@@ -19,43 +18,39 @@
       </label>
     </div>
 
-<div :class="$style.rightPart">
-  <label :class="[$style.label, $style.halfWidth]">
-    Максимальная сумма жилья
-    <input type="text">
-  </label>
-  <label :class="[$style.label, $style.halfWidth]">
-    % ставка
-    <input type="text">
-  </label>
+    <div :class="$style.rightPart">
 
-  <label :class="[$style.label, $style.halfWidth]">
-    Срок ипотеки
-    <input type="text">
-  </label>
+      <label :class="[$style.label, $style.halfWidth]">
+        Максимальная сумма жилья
+        <input type="text">
+      </label>
 
-  <label :class="[$style.label, $style.halfWidth]">
-    Первоначальный взнос
-    <input type="text">
-  </label>
+      <label :class="[$style.label, $style.halfWidth]">
+        % ставка
+        <input type="text">
+      </label>
 
-  <label :class="[$style.label, $style.halfWidth]">
-    Переплата
-    <input type="text">
-  </label>
-</div>
+      <label :class="[$style.label, $style.halfWidth]">
+        Срок ипотеки
+        <input type="text">
+      </label>
 
+      <label :class="[$style.label, $style.halfWidth]">
+        Первоначальный взнос
+        <input type="text">
+      </label>
 
+      <label :class="[$style.label, $style.halfWidth]">
+        Срок ипотеки
+        <input type="text">
+      </label>
 
+    </div>
   </div>
-
-
 </template>
 
-<script>
-export default {
-  name: "CardDeveloper"
-}
+<script setup lang="ts">
+
 </script>
 
 <style module>
