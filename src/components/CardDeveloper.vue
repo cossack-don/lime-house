@@ -21,11 +21,26 @@
 
 <div :class="$style.rightPart">
   <label :class="[$style.label, $style.halfWidth]">
-    Максимальная сумма
+    Максимальная сумма жилья
     <input type="text">
   </label>
   <label :class="[$style.label, $style.halfWidth]">
-    Название застройщика
+    % ставка
+    <input type="text">
+  </label>
+
+  <label :class="[$style.label, $style.halfWidth]">
+    Срок ипотеки
+    <input type="text">
+  </label>
+
+  <label :class="[$style.label, $style.halfWidth]">
+    Первоначальный взнос
+    <input type="text">
+  </label>
+
+  <label :class="[$style.label, $style.halfWidth]">
+    Переплата
     <input type="text">
   </label>
 </div>
