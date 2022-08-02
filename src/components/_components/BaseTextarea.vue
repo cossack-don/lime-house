@@ -68,6 +68,10 @@ const updateInput = (e:ISyntheticEvent<HTMLInputElement>) => {
   color: #fff;
 }
 
+.textarea:hover {
+  cursor: pointer;
+}
+
 .textarea:focus {
   border: 2px solid #fff;
 }
