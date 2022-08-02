@@ -36,7 +36,7 @@
 
 <script setup>
 import DataTerms from "@/Data";
-import BaseCheckBox from "@/components/BaseCheckBox";
+import BaseCheckBox from "@/components/_components/BaseCheckBox";
 </script>
 
 <style module>
