@@ -1,7 +1,7 @@
 <template>
   <div>
     <button
-      :class="[$style.buttonRed, {[$style.buttonGray]: props.grayButton}]"
+      :class="$style.button"
       :disabled="props.disabled"
       :type="props.type"
     >
@@ -26,37 +26,31 @@ const props = defineProps({
     type: String,
     default: 'button',
   },
-  grayButton: {
-    type: Boolean,
-    default: false,
-  },
 });
 </script>
 
 <style module>
-.buttonRed {
-  border:none;
+.button {
+  border: solid #0f0 2px;
   border-radius: 8px;
-  padding: 14px 24px;
-  background: #E30611;
+  padding: 5px;
+  background: #0f0;
   font-size: 17px;
-  font-weight: bold;
   line-height: 24px;
-  color: #FFFFFF;
+  color: #000;
 }
 
-.buttonRed:hover,:focus {
+.button:hover {
+  color: #0f0;
+  transition: 0.5s;
   cursor: pointer;
+  border: 2px solid #0f0;
+  background: #000;
 }
 
-.buttonRed:disabled {
+.button:disabled {
   cursor: default;
   background: #BCC3D07F;
   color: #969FA8;
-}
-
-.buttonGray {
-  background: #F2F3F7;
-  color:#000000;
 }
 </style>

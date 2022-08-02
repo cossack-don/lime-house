@@ -2,16 +2,21 @@
 <div :class="$style.wrapper">
 
     <div :class="$style.leftPart">
-      <BaseInput :class="$style.mb5" placeholder="" title-label="Название застройщика"/>
-      <BaseInput :class="$style.mb5" placeholder="" title-label="Сайт застройщика - url"/>
-      <BaseTextarea/>
+      <BaseInput
+          v-model="formData.nameDeveloper"
+          :class="$style.mb10"
+          placeholder=""
+          title-label="Название застройщика"
+      />
+      <BaseInput :class="$style.mb10" placeholder="" title-label="Сайт застройщика - url"/>
+      <BaseTextarea title-label="Комментарии о застройщике"/>
     </div>
 
     <div :class="$style.rightPart">
-      <BaseInput :class="$style.mb5" placeholder="" title-label="Максимальная сумма жилья"/>
-      <BaseInput :class="$style.mb5" placeholder="" title-label="Cтавка - %"/>
-      <BaseInput :class="$style.mb5" placeholder="" title-label="Срок ипотеки"/>
-      <BaseInput :class="$style.mb5" placeholder="" title-label="Первоначальный взнос"/>
+      <BaseInput :class="$style.mb10" placeholder="" title-label="Максимальная сумма жилья"/>
+      <BaseInput :class="$style.mb10" placeholder="" title-label="Cтавка - %"/>
+      <BaseInput :class="$style.mb10" placeholder="" title-label="Срок ипотеки"/>
+      <BaseInput :class="$style.mb10" placeholder="" title-label="Первоначальный взнос"/>
       <BaseInput placeholder="" title-label="Срок ипотеки"/>
     </div>
   </div>
@@ -20,6 +25,11 @@
 <script setup lang="ts">
 import BaseInput from '@/components/_components/BaseInput.vue'
 import BaseTextarea from '@/components/_components/BaseTextarea.vue'
+import { reactive, defineEmits } from "vue";
+
+const formData = reactive({
+  nameDeveloper:''
+})
 </script>
 
 <style module>
@@ -30,7 +40,7 @@ import BaseTextarea from '@/components/_components/BaseTextarea.vue'
   display: flex;
 }
 
-.mb5 {
+.mb10 {
   margin-bottom: 10px;
 }
 

@@ -8,13 +8,13 @@
     <form :class="$style.wrapper" @submit.prevent="generatePDF">
       <List/>
       <CardDeveloper/>
-      <button type="submit">Сформировать pdf</button>
+      <BaseButton :class="$style.buttonSubmit" type="submit" title="Сформировать PDF" />
     </form>
   </div>
 </template>
 
 <script lang="ts" setup>
-
+import BaseButton from '@/components/_components/BaseButton.vue'
 import { reactive } from "vue";
 import CardDeveloper from '@/components/CardDeveloper.vue';
 import List from './components/List.vue';
@@ -35,6 +35,7 @@ const generatePDF = () => {
   console.log('generate-pdf')
   doc.text("Hello world!", 10, 10);
   doc.save("a4.pdf");
+  console.log(dataForm)
 }
 </script>
 
@@ -42,6 +43,7 @@ const generatePDF = () => {
 .title {
   margin-top: 15px;
   text-align: center;
+  color: #0f0;
 }
 
 .app {
@@ -54,4 +56,11 @@ const generatePDF = () => {
   border:2px solid #0f0;
   border-radius: 8px;
 }
+
+
+.buttonSubmit {
+  margin-top: 15px;
+  text-align: center;
+}
+
 </style>
