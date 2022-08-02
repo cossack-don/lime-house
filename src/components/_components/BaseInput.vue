@@ -3,12 +3,10 @@
     :class="$style.wrapperInput"
   >
     <label
-      :for="props.idLabel"
       :class="$style.label"
     >
       {{ props.titleLabel }}
       <input
-        :id="props.idLabel"
         :class="$style.input"
         :type="props.type"
         :value="props.modelValue"
@@ -17,7 +15,6 @@
         @input="input"
       >
     </label>
-    <!-- <div>Error block</div> -->
   </div>
 </template>
 
@@ -34,10 +31,6 @@ const props = defineProps({
     default: 'text',
   },
   placeholder: {
-    type: String,
-    default: '',
-  },
-  idLabel: {
     type: String,
     default: '',
   },
@@ -64,7 +57,6 @@ const input = (e:ISyntheticEvent<HTMLInputElement>) => {
 </script>
 
 <style module>
-
 .input::-webkit-outer-spin-button,
 .input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -78,22 +70,22 @@ const input = (e:ISyntheticEvent<HTMLInputElement>) => {
 .input {
   outline: none;
   margin-top: 4px;
-  border: 1px solid #BCC3D07F;
+  border: 2px solid #0f0;
   border-radius: 8px;
-  padding: 14px 0 14px 12px;
-  background: #F2F3F7;
+  padding: 5px;
+  background: #888;
   font-size: 17px;
   font-weight: 400;
   line-height: 24px;
-  color: #000000;
+  color: #fff;
 }
 
 .input:focus {
-  border: 1px solid #007CFF;
+  border: 2px solid #fff;
 }
 
 .input::placeholder {
-  color: #969FA8;
+  color: #504f4f;
 }
 
 .label {
@@ -103,6 +95,10 @@ const input = (e:ISyntheticEvent<HTMLInputElement>) => {
   font-weight: 400;
   line-height: 20px;
   text-align: left;
-  color: #626C77;
+  color: #0f0;
+}
+
+.input[type="text"]:disabled {
+  background: red;
 }
 </style>

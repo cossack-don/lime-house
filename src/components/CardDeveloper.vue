@@ -2,79 +2,45 @@
 <div :class="$style.wrapper">
 
     <div :class="$style.leftPart">
-      <label :class="[$style.label, $style.halfWidth]">
-        Название застройщика
-        <input type="text">
-      </label>
-
-      <label :class="[$style.label, $style.halfWidth]">
-        url - ссылка на застройщика
-        <input type="text">
-      </label>
-
-      <label :class="[$style.label, $style.halfWidth]">
-        Комментарии о застройщике
-        <textarea></textarea>
-      </label>
+      <BaseInput :class="$style.mb5" placeholder="" title-label="Название застройщика"/>
+      <BaseInput :class="$style.mb5" placeholder="" title-label="Сайт застройщика - url"/>
+      <BaseTextarea/>
     </div>
 
     <div :class="$style.rightPart">
-
-      <label :class="[$style.label, $style.halfWidth]">
-        Максимальная сумма жилья
-        <input type="text">
-      </label>
-
-      <label :class="[$style.label, $style.halfWidth]">
-        % ставка
-        <input type="text">
-      </label>
-
-      <label :class="[$style.label, $style.halfWidth]">
-        Срок ипотеки
-        <input type="text">
-      </label>
-
-      <label :class="[$style.label, $style.halfWidth]">
-        Первоначальный взнос
-        <input type="text">
-      </label>
-
-      <label :class="[$style.label, $style.halfWidth]">
-        Срок ипотеки
-        <input type="text">
-      </label>
-
+      <BaseInput :class="$style.mb5" placeholder="" title-label="Максимальная сумма жилья"/>
+      <BaseInput :class="$style.mb5" placeholder="" title-label="Cтавка - %"/>
+      <BaseInput :class="$style.mb5" placeholder="" title-label="Срок ипотеки"/>
+      <BaseInput :class="$style.mb5" placeholder="" title-label="Первоначальный взнос"/>
+      <BaseInput placeholder="" title-label="Срок ипотеки"/>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-
+import BaseInput from '@/components/_components/BaseInput.vue'
+import BaseTextarea from '@/components/_components/BaseTextarea.vue'
 </script>
 
 <style module>
 .wrapper {
-  background: #ffffff;
-  padding: 15px;
+  background: #2c2c2c;
+  border:2px solid #0f0;
   border-radius: 8px;
   display: flex;
 }
 
-.label {
-  display: flex;
-  flex-direction: column;
-}
-
-.halfWidth {
-  /*width: 50%;*/
+.mb5 {
+  margin-bottom: 10px;
 }
 
 .leftPart {
   width: 100%;
+  padding: 15px;
 }
 
 .rightPart {
   width: 100%;
+  padding: 15px;
 }
 </style>

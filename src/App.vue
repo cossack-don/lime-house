@@ -1,10 +1,12 @@
 <template>
+
   <div :class="$style.app">
     <h2 :class="$style.title">Список приоритетных условий, при покупке квартиры.</h2>
 
-    <List/>
+
 
     <form :class="$style.wrapper" @submit.prevent="generatePDF">
+      <List/>
       <CardDeveloper/>
       <button type="submit">Сформировать pdf</button>
     </form>
@@ -12,6 +14,7 @@
 </template>
 
 <script lang="ts" setup>
+
 import { reactive } from "vue";
 import CardDeveloper from '@/components/CardDeveloper.vue';
 import List from './components/List.vue';
@@ -47,8 +50,8 @@ const generatePDF = () => {
 }
 
 .wrapper {
-  background: #ffffff;
   padding: 15px;
+  border:2px solid #0f0;
   border-radius: 8px;
 }
 </style>
