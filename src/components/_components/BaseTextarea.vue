@@ -3,8 +3,13 @@
     <label :class="$style.label">
       {{props.titleLabel}}
       <textarea
+          rows="2"
+          cols="2"
           :disabled="props.disabled"
           :class="$style.textarea"
+          :value="props.modelValue"
+          :placeholder="props.placeholder"
+          @input="updateInput"
       >
       </textarea>
     </label>
@@ -12,9 +17,13 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue';
+import {defineEmits, defineProps} from 'vue';
 
 const props = defineProps({
+  modelValue: {
+    type: [String, Number],
+    default: null,
+  },
   disabled: {
     type: Boolean,
     default: false,
@@ -23,7 +32,22 @@ const props = defineProps({
     type: String,
     default: 'title-label',
   },
+  placeholder: {
+    type: String,
+    default: '',
+  },
 })
+
+interface ISyntheticEvent<T extends EventTarget> extends Event {
+  target: T;
+}
+
+const emit = defineEmits(['update:modelValue']);
+
+const updateInput = (e:ISyntheticEvent<HTMLInputElement>) => {
+  const { value } = e.target;
+  emit('update:modelValue', value);
+};
 </script>
 
 <style module>

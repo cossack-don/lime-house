@@ -14,7 +14,7 @@
     </div>
 
 
-    <input placeholder="Комментарий" type="text">
+    <BaseTextarea title-label="Комментарий"/>
 
 
   </div>
@@ -34,7 +34,8 @@
 
 </template>
 
-<script setup>
+<script setup lang="ts">
+import BaseTextarea from '@/components/_components/BaseTextarea.vue'
 import DataTerms from "@/Data";
 import BaseCheckBox from "@/components/_components/BaseCheckBox";
 </script>
