@@ -56,7 +56,6 @@ const updateInput = (e:ISyntheticEvent<HTMLInputElement>) => {
 
 .textarea {
   width: 100%;
-  height: 150px;
   resize: none;
   border: 2px solid #0f0;
   border-radius: 8px;

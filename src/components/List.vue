@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.wrapper">
-    <itemCard v-for="item in 10" :key="item"/>
+    <itemCard v-for="item in 12" :key="item"/>
   </div>
 
 </template>

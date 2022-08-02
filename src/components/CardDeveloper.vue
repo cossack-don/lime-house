@@ -19,14 +19,12 @@
       <BaseInput :class="$style.mb10" placeholder="" title-label="Первоначальный взнос"/>
       <BaseInput placeholder="" title-label="Срок ипотеки"/>
     </div>
-  <BaseCheckBox/>222
   </div>
 </template>
 
 <script setup lang="ts">
 import BaseInput from '@/components/_components/BaseInput.vue';
 import BaseTextarea from '@/components/_components/BaseTextarea.vue';
-import BaseCheckBox from '@/components/_components/BaseCheckBox.vue';
 import { reactive, defineEmits } from "vue";
 
 const formData = reactive({

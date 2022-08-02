@@ -29,7 +29,7 @@ const change = (e:Event) => {
 const props = defineProps({
   checked: {
     type: Boolean,
-    default: true,
+    default: false,
   },
   labelText: {
     type: String,

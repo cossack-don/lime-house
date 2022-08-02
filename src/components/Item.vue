@@ -3,20 +3,12 @@
 
   <div :class="$style.item">
     <div style="display: flex; justify-content: space-between">
-      <div>
-        <label>
-          <input  type='checkbox' :class="$style.input">
-          <span>title</span>
-        </label>
-      </div>
+      <BaseCheckBox title="t"/>
 
-      <div>icon ?</div>
+      <img src="@/assets/icon-quastion.svg" alt="">
     </div>
 
-
-    <BaseTextarea title-label="Комментарий"/>
-
-
+    <BaseTextarea v-if="true" title-label="Комментарий"/>
   </div>
 
 
@@ -36,8 +28,9 @@
 
 <script setup lang="ts">
 import BaseTextarea from '@/components/_components/BaseTextarea.vue'
+import BaseCheckBox from '@/components/_components/BaseCheckBox.vue'
 import DataTerms from "@/Data";
-import BaseCheckBox from "@/components/_components/BaseCheckBox";
+
 </script>
 
 <style module>
@@ -45,7 +38,7 @@ import BaseCheckBox from "@/components/_components/BaseCheckBox";
   width: 24%;
   padding: 15px;
   border-radius: 8px;
-  background: #ffffff;
+  background: #2c2c2c;
   margin-bottom: 15px;
   margin-left: 15px;
   margin-right: 15px;
