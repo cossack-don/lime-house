@@ -1,11 +1,13 @@
 <template>
   <HeaderHouses/>
   <div :class="$style.app">
+    <h2 :class="$style.title">Подборка критериев:</h2>
     <form id="form" :class="$style.wrapper" @submit.prevent="generatePDF">
       <List/>
       <CardDeveloper/>
       <BaseButton :class="$style.buttonSubmit" type="submit" title="Сформировать PDF" />
     </form>
+    <pre>{{dataForm}}</pre>
   </div>
 </template>
 
@@ -43,7 +45,6 @@ const generatePDF = () => {
 }
 
 .wrapper {
-  margin-top:25px;
   margin-bottom: 25px;
   padding: 15px;
   border-radius: 8px;
@@ -78,5 +79,10 @@ const generatePDF = () => {
 .buttonSubmit {
   margin-top: 15px;
   text-align: center;
+}
+
+.title {
+  text-align: center;
+  padding: 25px;
 }
 </style>

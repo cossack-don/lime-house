@@ -6,7 +6,7 @@
        <h1 :class="$style.title">Список приоритетных условий,
          <br/> при покупке квартиры
        </h1>
-       <a href="#form" :class="$style.link">Хочу заполнить подборку</a>
+       <a href="#form" :class="$style.link">Хочу заполнить и распечатать</a>
      </div>
     </div>
   </section>

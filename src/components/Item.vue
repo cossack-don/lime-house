@@ -19,11 +19,6 @@
 <!--  https://www.sravni.ru/bank/sberbank-rossii/ipoteka/-->
 <!--  https://www.sberbank.ru/ru/person/credits/homenew-->
 <!--</div>-->
-
-
-
-
-
 </template>
 
 <script setup lang="ts">
@@ -35,13 +30,13 @@ import DataTerms from "@/Data";
 
 <style module>
 .item {
-  width: 24%;
+  width: 30%;
   padding: 15px;
   border-radius: 8px;
   background: #fff;
   margin-bottom: 15px;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
   box-shadow: 8px 0px 8px 0px rgba(34, 60, 80, 0.11);
 }
 
