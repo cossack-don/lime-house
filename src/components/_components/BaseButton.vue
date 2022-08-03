@@ -31,21 +31,21 @@ const props = defineProps({
 
 <style module>
 .button {
-  border: solid #0f0 2px;
+  border: solid #08a652 2px;
   border-radius: 8px;
   padding: 5px;
-  background: #0f0;
+  background: #08a652;
   font-size: 17px;
   line-height: 24px;
-  color: #000;
+  color: #ffffff;
 }
 
 .button:hover {
-  color: #0f0;
+  color: #494e53;
   transition: 0.5s;
   cursor: pointer;
-  border: 2px solid #0f0;
-  background: #000;
+  border: 2px solid #f0f3f6;
+  background: #f0f3f6;
 }
 
 .button:disabled {

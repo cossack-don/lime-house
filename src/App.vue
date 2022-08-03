@@ -1,8 +1,6 @@
 <template>
-
+  <HeaderHouses/>
   <div :class="$style.app">
-    <h2 :class="$style.title">Список приоритетных условий, при покупке квартиры.</h2>
-
 
 
     <form :class="$style.wrapper" @submit.prevent="generatePDF">
@@ -17,6 +15,7 @@
 import BaseButton from '@/components/_components/BaseButton.vue'
 import { reactive } from "vue";
 import CardDeveloper from '@/components/CardDeveloper.vue';
+import HeaderHouses from '@/view/HeaderHouses.vue';
 import List from './components/List.vue';
 import { doc } from '@/utils/generatePDF'
 
@@ -40,11 +39,7 @@ const generatePDF = () => {
 </script>
 
 <style module>
-.title {
-  margin-top: 15px;
-  text-align: center;
-  color: #0f0;
-}
+
 
 .app {
   max-width: 920px;
@@ -62,5 +57,4 @@ const generatePDF = () => {
   margin-top: 15px;
   text-align: center;
 }
-
 </style>
