@@ -43,7 +43,8 @@ const generatePDF = () => {
 }
 
 .wrapper {
-  margin-top:15px;
+  margin-top:25px;
+  margin-bottom: 25px;
   padding: 15px;
   border-radius: 8px;
   background: #f0f3f6;

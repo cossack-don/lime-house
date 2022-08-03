@@ -57,14 +57,14 @@ const updateInput = (e:ISyntheticEvent<HTMLInputElement>) => {
 .textarea {
   width: 100%;
   resize: none;
-  border: 2px solid #0f0;
+  border: 2px solid #08a652;
   border-radius: 8px;
   padding: 5px;
-  background: #888;
+  background: #ffffff;
   font-size: 17px;
   font-weight: 400;
   line-height: 24px;
-  color: #fff;
+  color: #494e53;
 }
 
 .textarea:hover {
@@ -72,7 +72,7 @@ const updateInput = (e:ISyntheticEvent<HTMLInputElement>) => {
 }
 
 .textarea:focus {
-  border: 2px solid #fff;
+  border: 2px solid #494e53;
 }
 
 .textarea::placeholder {
@@ -84,6 +84,6 @@ const updateInput = (e:ISyntheticEvent<HTMLInputElement>) => {
   font-weight: 400;
   line-height: 20px;
   text-align: left;
-  color: #0f0;
+  color: #08a652;
 }
 </style>

@@ -34,8 +34,7 @@ const formData = reactive({
 
 <style module>
 .wrapper {
-  background: #2c2c2c;
-  border:2px solid #0f0;
+  border:2px solid #08a652;
   border-radius: 8px;
   display: flex;
 }

@@ -44,7 +44,7 @@ const props = defineProps({
   color: #494e53;
   transition: 0.5s;
   cursor: pointer;
-  border: 2px solid #f0f3f6;
+  border: 2px solid #494e53;
   background: #f0f3f6;
 }
 
