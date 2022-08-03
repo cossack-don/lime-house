@@ -1,9 +1,7 @@
 <template>
   <HeaderHouses/>
   <div :class="$style.app">
-
-
-    <form :class="$style.wrapper" @submit.prevent="generatePDF">
+    <form id="form" :class="$style.wrapper" @submit.prevent="generatePDF">
       <List/>
       <CardDeveloper/>
       <BaseButton :class="$style.buttonSubmit" type="submit" title="Сформировать PDF" />
