@@ -40,16 +40,40 @@ const generatePDF = () => {
 
 
 .app {
-  max-width: 920px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .wrapper {
   padding: 15px;
-  border:2px solid #0f0;
   border-radius: 8px;
+  background: #f0f3f6;
+  position: relative;
 }
 
+.wrapper:before {
+  content:'';
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  top: 5%;
+  left: -43%;
+  background: url('~@/assets/home.png') no-repeat center;
+  background-size: 100%;
+  border-color: #0f0;
+}
+
+.wrapper:after {
+  content: '';
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  top: 40%;
+  background: url(/img/man.a3138583.png) no-repeat center;
+  background-size: 100%;
+  border-color: #0f0;
+  right: -43%;
+}
 
 .buttonSubmit {
   margin-top: 15px;

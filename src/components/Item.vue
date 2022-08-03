@@ -38,11 +38,11 @@ import DataTerms from "@/Data";
   width: 24%;
   padding: 15px;
   border-radius: 8px;
-  background: #2c2c2c;
+  background: #fff;
   margin-bottom: 15px;
   margin-left: 15px;
   margin-right: 15px;
-  box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.11);
+  box-shadow: 8px 0px 8px 0px rgba(34, 60, 80, 0.11);
 }
 
 .wrapperItem {
