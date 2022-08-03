@@ -37,14 +37,13 @@ const generatePDF = () => {
 </script>
 
 <style module>
-
-
 .app {
   max-width: 800px;
   margin: 0 auto;
 }
 
 .wrapper {
+  margin-top:15px;
   padding: 15px;
   border-radius: 8px;
   background: #f0f3f6;

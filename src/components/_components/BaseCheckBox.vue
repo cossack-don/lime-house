@@ -50,7 +50,7 @@ const props = defineProps({
   font-size: 17px;
   font-weight: 400;
   line-height: 24px;
-  color: #0f0;
+  color: #08a652;
   cursor: pointer;
 }
 
@@ -64,15 +64,15 @@ const props = defineProps({
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  background-color: #2c2c2c;
-  border: 2px solid #0f0;
+  background-color: #ffffff;
+  border: 2px solid #08a652;
   border-radius: 4px;
   transform-style: preserve-3d;
   cursor: pointer;
 }
 
 .inputCheckbox:checked {
-  background: #2c2c2c url('~@/assets/check.svg') no-repeat center;
-  border-color: #0f0;
+  background: #ffffff url('~@/assets/check.svg') no-repeat center;
+  border-color: #08a652;
 }
 </style>
