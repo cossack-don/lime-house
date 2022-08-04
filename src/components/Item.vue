@@ -3,7 +3,7 @@
   <div :class="$style.wrapper">
     <div :class="$style.item" v-for="(item, index) in store.$state.dataForm.listlistCriterial" :key="index">
       <div style="display: flex; justify-content: space-between">
-        <BaseCheckBox v-model:checked="item.checked" title="t"/>
+        <BaseCheckBox v-model:checked="item.checked" :labelText="item.label"/>
         <div :class="$style.toolTip">
           <img src="@/assets/icon-quastion.svg" alt="">
           <div :class="$style.www"><b>Описание:</b> {{item.textTooltip}}</div>

@@ -1,4 +1,5 @@
 <template>
+  https://vuelidate-next.netlify.app/#getting-started-1  - vue validate for vue 3 needed install <br/>
   <HeaderHouses/>
   <div :class="$style.app">
     <h2 :class="$style.title">Подборка критериев:</h2>

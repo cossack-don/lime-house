@@ -3,4 +3,5 @@ export interface IDataComments {
     comments: string;
     checked: boolean;
     textTooltip: string;
+    label: string;
 }

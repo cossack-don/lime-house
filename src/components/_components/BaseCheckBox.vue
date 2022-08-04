@@ -47,7 +47,7 @@ const props = defineProps({
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 17px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 24px;
   color: #08a652;
