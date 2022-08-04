@@ -18,9 +18,10 @@ import CardDeveloper from '@/components/CardDeveloper.vue';
 import HeaderHouses from '@/view/HeaderHouses.vue';
 import List from './components/List.vue';
 import { doc } from '@/utils/generatePDF'
+import {useTest} from '@/store/test'
 
+console.log(useTest())
 const dataForm = reactive({
-
   developerName:'', // название застройщика
   urlDeveloperName:'', // ссылка на застройщика или их предлжения
   commentsDeveloper:'', // комментарий о застройщике

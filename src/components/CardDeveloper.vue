@@ -27,7 +27,16 @@ import BaseInput from '@/components/_components/BaseInput.vue';
 import BaseTextarea from '@/components/_components/BaseTextarea.vue';
 import { reactive, defineEmits } from "vue";
 
-const formData = reactive({
+// type-based
+// const emit = defineEmits<{
+//   (e: 'change', id: number): void
+//   (e: 'update', value: string): void
+// }>()
+
+interface IFormData {
+  nameDeveloper:string
+}
+const formData = reactive<IFormData>({
   nameDeveloper:''
 })
 </script>
