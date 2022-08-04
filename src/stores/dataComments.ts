@@ -5,45 +5,54 @@ export const listlistCriterial:IDataComments[] = [
         id:1,
         comments:'1',
         checked:false,
+        textTooltip:'композиционная форма, которую используют в литературоведении и лингвистике для подробной характеристики предметов или явлений.',
     },
     {
         id:2,
         comments:'2',
         checked:false,
+        textTooltip:'TEXT-2',
     },
     {
         id:3,
         comments:'2',
         checked:false,
+        textTooltip:'TEXT-3',
     },
     {
         id:4,
         comments:'2',
         checked:false,
+        textTooltip:'TEXT-4',
     },
     {
         id:5,
         comments:'2',
         checked:false,
+        textTooltip:'TEXT-4',
     },
     {
         id:6,
         comments:'2',
         checked:false,
+        textTooltip:'TEXT-4'
     },
     {
         id:7,
         comments:'2',
         checked:false,
+        textTooltip:'TEXT-4',
     },
     {
         id:8,
         comments:'2',
         checked:false,
+        textTooltip:'TEXT-4',
     },
     {
         id:9,
         comments:'2',
         checked:false,
+        textTooltip:'TEXT-4',
     }
 ];

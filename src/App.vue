@@ -7,14 +7,13 @@
       <CardDeveloper/>
       <BaseButton :class="$style.buttonSubmit" type="submit" title="Сформировать PDF" />
     </form>
-    <pre>{{dataForm}}</pre>
   </div>
 </template>
 
 <script lang="ts" setup>
 import BaseButton from '@/components/_components/BaseButton.vue'
 import { reactive } from "vue";
-import CardDeveloper from '@/components/CardDeveloper.vue';
+import CardDeveloper from '@/view/CardDeveloper.vue';
 import HeaderHouses from '@/view/HeaderHouses.vue';
 import Item from '@/components/Item';
 import { doc } from '@/utils/generatePDF'
