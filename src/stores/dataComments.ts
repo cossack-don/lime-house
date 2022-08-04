@@ -1,0 +1,49 @@
+import { IDataComments } from '@/stores/interfaces/dataComments'
+
+export const listlistCriterial:IDataComments[] = [
+    {
+        id:1,
+        comments:'1',
+        checked:false,
+    },
+    {
+        id:2,
+        comments:'2',
+        checked:false,
+    },
+    {
+        id:3,
+        comments:'2',
+        checked:false,
+    },
+    {
+        id:4,
+        comments:'2',
+        checked:false,
+    },
+    {
+        id:5,
+        comments:'2',
+        checked:false,
+    },
+    {
+        id:6,
+        comments:'2',
+        checked:false,
+    },
+    {
+        id:7,
+        comments:'2',
+        checked:false,
+    },
+    {
+        id:8,
+        comments:'2',
+        checked:false,
+    },
+    {
+        id:9,
+        comments:'2',
+        checked:false,
+    }
+];

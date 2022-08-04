@@ -1,13 +1,15 @@
 <template>
   <div :class="$style.wrapper">
-    <itemCard v-for="item in 12" :key="item"/>
+    <Item v-for="(item, ) in store.$state.dataForm.listCriterial" v-model="store.$state.dataForm.listCriterial[index]" :key="item" />
   </div>
 
 </template>
 
 <script setup>
-import itemCard from '@/components/Item.vue'
+import Item from '@/components/Item.vue'
+import { storeDataForm } from '@/stores/storeDataForm';
 
+const store = storeDataForm();
 </script>
 
 <style module>

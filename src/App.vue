@@ -3,7 +3,7 @@
   <div :class="$style.app">
     <h2 :class="$style.title">Подборка критериев:</h2>
     <form id="form" :class="$style.wrapper" @submit.prevent="generatePDF">
-      <List/>
+      <Item/>
       <CardDeveloper/>
       <BaseButton :class="$style.buttonSubmit" type="submit" title="Сформировать PDF" />
     </form>
@@ -16,11 +16,9 @@ import BaseButton from '@/components/_components/BaseButton.vue'
 import { reactive } from "vue";
 import CardDeveloper from '@/components/CardDeveloper.vue';
 import HeaderHouses from '@/view/HeaderHouses.vue';
-import List from './components/List.vue';
+import Item from '@/components/Item';
 import { doc } from '@/utils/generatePDF'
-import {useTest} from '@/store/test'
 
-console.log(useTest())
 const dataForm = reactive({
   developerName:'', // название застройщика
   urlDeveloperName:'', // ссылка на застройщика или их предлжения
@@ -71,7 +69,7 @@ const generatePDF = () => {
   width: 40%;
   height: 40%;
   top: 40%;
-  background: url(/img/man.a3138583.png) no-repeat center;
+  background: url('~@/assets/man.png') no-repeat center;
   background-size: 100%;
   border-color: #0f0;
   right: -43%;

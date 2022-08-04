@@ -12,7 +12,8 @@
         :value="props.modelValue"
         :placeholder="props.placeholder"
         :disabled="props.disabled"
-        @input="input"
+        @input="emit('update:modelValue', $event.target.value)"
+
       >
     </label>
   </div>
@@ -24,7 +25,7 @@ import { defineProps, defineEmits } from 'vue';
 const props = defineProps({
   modelValue: {
     type: [String, Number],
-    default: null,
+    default: '',
   },
   type: {
     type: String,
@@ -42,6 +43,7 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+
 });
 
 interface ISyntheticEvent<T extends EventTarget> extends Event {

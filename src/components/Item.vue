@@ -1,15 +1,15 @@
 <template>
 <!--<div :class="$style.wrapperItem">-->
-
-  <div :class="$style.item">
-    <div style="display: flex; justify-content: space-between">
-      <BaseCheckBox title="t"/>
-
-      <img src="@/assets/icon-quastion.svg" alt="">
+  <div :class="$style.wrapper">
+    <div :class="$style.item" v-for="(item, index) in store.$state.dataForm.listlistCriterial" :key="index">
+      <div style="display: flex; justify-content: space-between">
+        <BaseCheckBox v-model:checked="item.checked" title="t"/>
+        <img src="@/assets/icon-quastion.svg" alt="">
+      </div>
+      <BaseTextarea :class="$style.textarea" :disabled="!item.checked" v-model="item.comments"  title-label="Комментарий"/>
     </div>
-
-    <BaseTextarea v-if="true" title-label="Комментарий"/>
   </div>
+
 
 
 <!--  <div :class="$style.toolTip">-->
@@ -25,7 +25,13 @@
 import BaseTextarea from '@/components/_components/BaseTextarea.vue'
 import BaseCheckBox from '@/components/_components/BaseCheckBox.vue'
 import DataTerms from "@/Data";
-
+import { storeDataForm } from '@/stores/storeDataForm';
+import {defineEmits} from "vue";
+const emit = defineEmits(['test']);
+const input = (value:any) => {
+  emit('test', value);
+};
+const store = storeDataForm();
 </script>
 
 <style module>
@@ -76,5 +82,15 @@ import DataTerms from "@/Data";
 .toolTip:hover .www{
   visibility: visible;
   opacity: 1;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+}
+
+.textarea {
+  margin-top: 10px;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div :class="$style.wrapper">
     <label :class="$style.label">
-      {{props.titleLabel}}
+      <p :class="$style.text">{{props.titleLabel}}</p>
       <textarea
           rows="2"
           cols="2"
@@ -79,11 +79,19 @@ const updateInput = (e:ISyntheticEvent<HTMLInputElement>) => {
   color: #504f4f;
 }
 
+.textarea:disabled {
+  opacity: 0.2;
+}
+
 .label {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   text-align: left;
   color: #08a652;
+}
+
+.text {
+  margin-bottom: 5px;
 }
 </style>
