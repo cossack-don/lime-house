@@ -31,8 +31,8 @@ const dataForm = reactive({
 
 const generatePDF = () => {
   console.log('generate-pdf')
-  doc.text("Hello world!", 10, 10);
-  doc.save("a4.pdf");
+  // doc.text("Hello world!", 10, 10);
+  // doc.save("a4.pdf");
   console.log(dataForm)
 }
 </script>

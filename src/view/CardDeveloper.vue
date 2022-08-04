@@ -1,7 +1,7 @@
 <template>
 <div :class="$style.wrapper">
 <!--<pre>{{store.$state.dataForm}}</pre>-->
-    <div :class="$style.leftPart">
+    <div :class="$style.leftPart" >
       <BaseInput
           v-model="store.$state.dataForm.developerName"
           :class="$style.mb10"
@@ -49,6 +49,10 @@
           placeholder=""
           title-label="Переплата"
       />
+      <div class="input-errors" v-for="error of v$.developerName.$errors" :key="error.$uid">
+        <div class="error-msg">{{ error.$message }}</div>
+      </div>
+      <pre>{{ v$}}</pre>
     </div>
   </div>
 </template>
@@ -58,8 +62,15 @@ import BaseInput from '@/components/_components/BaseInput.vue';
 import BaseTextarea from '@/components/_components/BaseTextarea.vue';
 import { reactive, defineEmits, ref } from "vue";
 import { storeDataForm } from '@/stores/storeDataForm';
+import useVuelidate from '@vuelidate/core'
+import { required, email,  } from '@vuelidate/validators'
 
 const store = storeDataForm();
+
+const rules = {
+  developerName: { required  },
+}
+const v$ = useVuelidate(rules, store.$state.dataForm.dataForm)
 
 // type-based
 // const emit = defineEmits<{
