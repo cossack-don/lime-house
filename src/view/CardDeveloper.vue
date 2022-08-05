@@ -1,9 +1,9 @@
 <template>
 <div :class="$style.wrapper">
-<!--<pre>{{store.$state.dataForm}}</pre>-->
+<pre>{{store.$state.dataForm}}</pre>
     <div :class="$style.leftPart" >
       <BaseInput
-          v-model="store.$state.dataForm.developerName"
+          v-model="store.$state.dataForm.dataForm.developerName"
           :class="$style.mb10"
           placeholder=""
           title-label="Название застройщика"

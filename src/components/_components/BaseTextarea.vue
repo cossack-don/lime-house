@@ -1,10 +1,8 @@
 <template>
-  <div :class="$style.wrapper">
+  <div>
     <label :class="$style.label">
       <p :class="$style.text">{{props.titleLabel}}</p>
       <textarea
-          rows="2"
-          cols="2"
           :disabled="props.disabled"
           :class="$style.textarea"
           :value="props.modelValue"
@@ -17,26 +15,10 @@
 </template>
 
 <script setup lang="ts">
-import {defineEmits, defineProps} from 'vue';
+import { defineEmits, defineProps } from 'vue';
+import { IBaseTextarea } from '@/components/_components/interfaces';
 
-const props = defineProps({
-  modelValue: {
-    type: [String, Number],
-    default: null,
-  },
-  disabled: {
-    type: Boolean,
-    default: false,
-  },
-  titleLabel: {
-    type: String,
-    default: 'title-label',
-  },
-  placeholder: {
-    type: String,
-    default: '',
-  },
-})
+const props = defineProps<IBaseTextarea>();
 
 interface ISyntheticEvent<T extends EventTarget> extends Event {
   target: T;
@@ -51,9 +33,6 @@ const updateInput = (e:ISyntheticEvent<HTMLInputElement>) => {
 </script>
 
 <style module>
-.wrapper {
-}
-
 .textarea {
   width: 100%;
   resize: none;

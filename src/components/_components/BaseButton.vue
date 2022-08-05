@@ -12,21 +12,9 @@
 
 <script setup lang="ts">
 import { defineProps } from 'vue';
+import { IBaseButton } from '@/components/_components/interfaces';
 
-const props = defineProps({
-  disabled: {
-    type: Boolean,
-    default: false,
-  },
-  title: {
-    type: String,
-    default: 'Title',
-  },
-  type: {
-    type: String,
-    default: 'button',
-  },
-});
+const props = defineProps<IBaseButton>();
 </script>
 
 <style module>

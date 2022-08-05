@@ -18,6 +18,7 @@
 
 <script lang="ts" setup>
 import { defineProps, defineEmits } from 'vue';
+import { IBaseCheckbox } from "@/components/_components/interfaces";
 
 const emit = defineEmits(['update:checked']);
 
@@ -26,16 +27,7 @@ const change = (e:Event) => {
   emit('update:checked', checked);
 };
 
-const props = defineProps({
-  checked: {
-    type: Boolean,
-    default: false,
-  },
-  labelText: {
-    type: String,
-    default: 'Текст',
-  },
-});
+const props = defineProps<IBaseCheckbox>();
 </script>
 
 <style module>
