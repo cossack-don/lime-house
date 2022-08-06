@@ -76,6 +76,19 @@ console.log(store.$state)
   margin: 0 auto;
 }
 
+body::-webkit-scrollbar {
+  width: 9px;               /* ширина scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #f0f3f6;        /* цвет дорожки */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #08a652;    /* цвет плашки */
+  border-radius: 20px;       /* закругления плашки */
+}
+
 .wrapper {
   margin-bottom: 25px;
   padding: 15px;
