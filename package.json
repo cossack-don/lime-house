@@ -8,8 +8,6 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@vuelidate/core": "^2.0.0-alpha.44",
-    "@vuelidate/validators": "^2.0.0-alpha.31",
     "core-js": "^3.6.5",
     "jspdf": "^2.5.1",
     "pinia": "^2.0.17",

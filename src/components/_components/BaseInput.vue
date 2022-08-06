@@ -22,8 +22,34 @@
 <script lang="ts" setup>
 import { defineProps, defineEmits } from 'vue';
 import { IBaseInput } from "@/components/_components/interfaces";
+// modelValue?: string | number;
+// type?: string;
+// placeholder?: string;
+// titleLabel?: string;
+// disabled?: boolean;
+const props = defineProps({
+  modelValue: {
+    type: [String, Number],
+    default: '',
+  },
+  type: {
+    type: String,
+    default: 'text',
+  },
+  placeholder: {
+    type: String,
+    default: '',
+  },
+  titleLabel: {
+    type: String,
+    default: 'Title',
+  },
+  disabled: {
+    type: Boolean,
+    default: false,
+  },
+});
 
-const props = defineProps<IBaseInput>();
 const emit = defineEmits(['update:modelValue']);
 
 // first variant @input="emit('update:modelValue', $event.target.value)"

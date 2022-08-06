@@ -1,5 +1,7 @@
 <template>
   https://vuelidate-next.netlify.app/#getting-started-1  - vue validate for vue 3 needed install <br/>
+  https://vee-validate.logaretm.com/v4/guide/composition-api/validation <br/>
+  vue-mask for numbers,string
   <HeaderHouses/>
   <div :class="$style.app">
     <h2 :class="$style.title">Подборка критериев:</h2>
@@ -15,7 +17,7 @@
 import BaseButton from '@/components/_components/BaseButton.vue'
 import CardDeveloper from '@/view/CardDeveloper.vue';
 import HeaderHouses from '@/view/HeaderHouses.vue';
-import Item from '@/components/Item';
+import Item from '@/components/Item.vue';
 import { doc } from '@/utils/generatePDF'
 
 const generatePDF = () => {

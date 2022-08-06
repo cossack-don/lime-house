@@ -1,15 +1,15 @@
 <template>
   <div>
     <label :class="$style.label">
-      <p :class="$style.text">{{props.titleLabel}}</p>
+      <p :class="$style.text">{{ props.titleLabel }}</p>
       <textarea
           :disabled="props.disabled"
           :class="$style.textarea"
           :value="props.modelValue"
           :placeholder="props.placeholder"
           @input="updateInput"
-      >
-      </textarea>
+      ></textarea>
+
     </label>
   </div>
 </template>
@@ -18,7 +18,24 @@
 import { defineEmits, defineProps } from 'vue';
 import { IBaseTextarea } from '@/components/_components/interfaces';
 
-const props = defineProps<IBaseTextarea>();
+const props = defineProps({
+  modelValue: {
+    type: [String, Number],
+    default: null,
+  },
+  disabled: {
+    type: Boolean,
+    default: false,
+  },
+  titleLabel: {
+    type: String,
+    default: 'title-label',
+  },
+  placeholder: {
+    type: String,
+    default: '',
+  },
+})
 
 interface ISyntheticEvent<T extends EventTarget> extends Event {
   target: T;

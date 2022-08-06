@@ -5,8 +5,8 @@ export interface IBaseButton {
 }
 
 export interface IBaseCheckbox {
-    checked: boolean;
-    labelText: string;
+    checked?: boolean;
+    labelText?: string;
 }
 
 export interface  IBaseTextarea {
@@ -17,9 +17,9 @@ export interface  IBaseTextarea {
 }
 
 export interface IBaseInput {
-    modelValue: string | number;
-    type: string;
-    placeholder: string;
-    titleLabel: string;
-    disabled: boolean;
+    modelValue?: string | number;
+    type?: string;
+    placeholder?: string;
+    titleLabel?: string;
+    disabled?: boolean;
 }

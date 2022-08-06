@@ -12,9 +12,9 @@
   </section>
 </template>
 
-<script setup lang="ts">
-import BaseButton from '@/components/_components/BaseButton.vue'
-</script>
+<!--<script setup lang="ts">-->
+
+<!--</script>-->
 
 <style module>
 .wrapper {
