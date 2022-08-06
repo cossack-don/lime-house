@@ -1,36 +1,26 @@
 <template>
-<!--<div :class="$style.wrapperItem">-->
   <div :class="$style.wrapper">
     <div :class="$style.item" v-for="(item, index) in store.$state.dataForm.listlistCriterial" :key="index">
       <div style="display: flex; justify-content: space-between">
+        <!-- checkbox -->
         <BaseCheckBox v-model:checked="item.checked" :labelText="item.label"/>
+        <!-- tooltip -->
         <div :class="$style.toolTip">
           <img src="@/assets/icon-quastion.svg" alt="">
           <div :class="$style.www"><b>Описание:</b> {{item.textTooltip}}</div>
         </div>
       </div>
+      <!-- textarea -->
       <BaseTextarea :class="[$style.textarea, {[$style.opacity]: !item.checked}]" :disabled="!item.checked" v-model="item.comments"  title-label="Комментарий"/>
     </div>
   </div>
-
-
-
-
-<!--  https://www.sravni.ru/bank/sberbank-rossii/ipoteka/-->
-<!--  https://www.sberbank.ru/ru/person/credits/homenew-->
-<!--</div>-->
 </template>
 
 <script setup lang="ts">
 import BaseTextarea from '@/components/_components/BaseTextarea.vue'
 import BaseCheckBox from '@/components/_components/BaseCheckBox.vue'
-import DataTerms from "@/Data";
 import { storeDataForm } from '@/stores/storeDataForm';
-import {defineEmits} from "vue";
-const emit = defineEmits(['test']);
-const input = (value:any) => {
-  emit('test', value);
-};
+
 const store = storeDataForm();
 </script>
 
@@ -47,12 +37,6 @@ const store = storeDataForm();
   margin-left: 10px;
   margin-right: 10px;
   box-shadow: 8px 0px 8px 0px rgba(34, 60, 80, 0.11);
-}
-
-.wrapperItem {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap:wrap;
 }
 
 .toolTip {

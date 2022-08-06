@@ -1,18 +1,14 @@
 <template>
-<!--  https://vuelidate-next.netlify.app/#getting-started-1  - vue validate for vue 3 needed install <br/>-->
-<!--  https://vee-validate.logaretm.com/v4/guide/composition-api/validation <br/>-->
-<!--  vue-mask for numbers,string <br/>-->
-<!--  https://reddeveloper.ru/blog/34/vklucenie-utf-8-v-jspdf-s-pomos-u-angular-->
-<!--  https://github.com/parallax/jsPDF-->
   <HeaderHouses/>
+
   <div :class="$style.app">
     <h2 :class="$style.title">Подборка критериев:</h2>
+
     <form id="form" :class="$style.wrapper" @submit.prevent="generatePDF">
       <Item/>
       <CardDeveloper/>
       <BaseButton :class="$style.buttonSubmit" type="submit" title="Сформировать PDF" />
     </form>
-    <pre>{{store.$state.dataForm}}</pre>
   </div>
 </template>
 
@@ -23,6 +19,7 @@ import HeaderHouses from '@/view/HeaderHouses.vue';
 import Item from '@/components/Item.vue';
 import { storeDataForm } from '@/stores/storeDataForm';
 import { pdf } from '@/utils/generatePDF';
+import {listlistCriterial} from "@/stores/dataComments";
 
 const store = storeDataForm();
 
@@ -30,11 +27,21 @@ const generatePDF =  () => {
 
   const values = Object.values(store.$state.dataForm.dataForm);
 
-  pdf.text('Список приоритетных условий, при покупке квартиры', 10,10);
+
+
+
+  pdf.setFontSize(18)
+  pdf.text('Список приоритетных условий, при покупке квартиры', 10,10, );
+
+  pdf.setFontSize(14)
   pdf.text(
    `
-   Название застройщика - ${values[0]}
-   Ссылка на застройщика или их предлжения - ${values[1]}
+   Название застройщика:
+
+   ${values[0]}
+
+   Ссылка на застройщика или их предлжения -
+   ${values[1]}
    Омментарий о застройщике - ${values[2]}
    Максимальная сумма квартиры - ${values[3]}
    Процентная ставка - ${values[4]}
@@ -42,7 +49,18 @@ const generatePDF =  () => {
    Первоначальный взнос - ${values[6]}
    Переплата - ${values[7]}
   `
-      , 20, 20);
+      , 10, 20);
+
+  pdf.setFontSize(14)
+  let count = 70
+  store.$state.dataForm.listlistCriterial.forEach((item) => {
+    pdf.text(  `
+    ${item.label}:
+    ${item.comments}
+    `, 10, count);
+    count+=15
+  })
+
 
   pdf.save("a4.pdf");
 }

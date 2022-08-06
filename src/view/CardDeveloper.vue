@@ -13,6 +13,12 @@
           placeholder=""
           title-label="Сайт застройщика - url"
       />
+      <BaseInput
+          v-model="store.$state.dataForm.dataForm.phone"
+          :class="$style.mb10"
+          placeholder=""
+          title-label="Телефон"
+      />
       <BaseTextarea
           v-model="store.$state.dataForm.dataForm.commentsDeveloper"
           title-label="Комментарии о застройщике"

@@ -16,10 +16,6 @@
   </section>
 </template>
 
-<!--<script setup lang="ts">-->
-
-<!--</script>-->
-
 <style module>
 .wrapper {
   margin-left: 10%;
@@ -34,7 +30,7 @@
 
 .bgHouses {
   width: 100%;
-  background: #2c2c2c url('~@/assets/test.png') no-repeat center;
+  background: #2c2c2c url('~@/assets/bg-home.png') no-repeat center;
   height: 600px;
   background-size: cover;
   display: flex;
