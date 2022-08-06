@@ -44,7 +44,7 @@ const props = defineProps({
 .button {
   border: solid #08a652 2px;
   border-radius: 8px;
-  padding: 5px;
+  padding: 10px 15px;
   background: #08a652;
   font-size: 17px;
   line-height: 24px;

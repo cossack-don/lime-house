@@ -28,6 +28,7 @@ const store = storeDataForm();
 .opacity {
   opacity: 0.4;
 }
+
 .item {
   width: 30%;
   padding: 15px;

@@ -24,8 +24,8 @@
 .title {
   font-size: 23px;
   font-weight: bold;
-  color: #ffffff;
-  margin-bottom: 15px;
+  color: #2c3e50;
+  margin-bottom: 50px;
 }
 
 .bgHouses {
@@ -39,16 +39,15 @@
 }
 
 .wrapperText {
-  width: 400px;
-  background: #2c3e50;
+  background: #ffffff;
   border-radius: 8px;
-  padding: 15px 15px 20px 15px;
+  padding: 25px 15px 35px 15px;
 }
 
 .link {
   border: solid #08a652 2px;
   border-radius: 8px;
-  padding: 5px;
+  padding: 15px;
   background: #08a652;
   font-size: 17px;
   line-height: 24px;
@@ -65,14 +64,6 @@
 }
 
 .cont {
-  margin-left: auto;
-  margin-bottom: auto;
-  margin-top: 25px;
-  margin-right: 25px;
-}
-
-
-.cont {
 border-radius: 50%;
   border: none;
   outline: none;
@@ -80,6 +71,10 @@ border-radius: 50%;
   cursor: pointer;
   position: relative;
   z-index: 0;
+  margin-left: auto;
+  margin-bottom: auto;
+  margin-top: 25px;
+  margin-right: 25px;
 }
 
 .cont:before {
@@ -97,10 +92,6 @@ border-radius: 50%;
   opacity: 0;
   transition: opacity .3s ease-in-out;
   border-radius: 50%;
-}
-
-.cont:active {
-  color: #000
 }
 
 .cont:before {

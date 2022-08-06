@@ -9,17 +9,21 @@
       <CardDeveloper/>
       <BaseButton :class="$style.buttonSubmit" type="submit" title="Сформировать PDF" />
     </form>
+
+
   </div>
+  <Cards/>
 </template>
 
 <script lang="ts" setup>
 import BaseButton from '@/components/_components/BaseButton.vue'
 import CardDeveloper from '@/view/CardDeveloper.vue';
 import HeaderHouses from '@/view/HeaderHouses.vue';
+import Cards from '@/view/Cards.vue';
 import Item from '@/components/Item.vue';
 import { storeDataForm } from '@/stores/storeDataForm';
 import { pdf } from '@/utils/generatePDF';
-import {listlistCriterial} from "@/stores/dataComments";
+
 
 const store = storeDataForm();
 
