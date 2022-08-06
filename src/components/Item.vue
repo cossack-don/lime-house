@@ -8,9 +8,8 @@
           <img src="@/assets/icon-quastion.svg" alt="">
           <div :class="$style.www"><b>Описание:</b> {{item.textTooltip}}</div>
         </div>
-
       </div>
-      <BaseTextarea :class="$style.textarea" :disabled="!item.checked" v-model="item.comments"  title-label="Комментарий"/>
+      <BaseTextarea :class="[$style.textarea, {[$style.opacity]: !item.checked}]" :disabled="!item.checked" v-model="item.comments"  title-label="Комментарий"/>
     </div>
   </div>
 
@@ -36,6 +35,9 @@ const store = storeDataForm();
 </script>
 
 <style module>
+.opacity {
+  opacity: 0.4;
+}
 .item {
   width: 30%;
   padding: 15px;

@@ -1,6 +1,5 @@
 <template>
 <div :class="$style.wrapper">
-<pre>{{store.$state.dataForm}}</pre>
     <div :class="$style.leftPart" >
       <BaseInput
           v-model="store.$state.dataForm.dataForm.developerName"
@@ -9,48 +8,46 @@
           title-label="Название застройщика"
       />
       <BaseInput
-          v-model="store.$state.dataForm.urlDeveloperName"
+          v-model="store.$state.dataForm.dataForm.urlDeveloperName"
           :class="$style.mb10"
           placeholder=""
           title-label="Сайт застройщика - url"
       />
       <BaseTextarea
-          v-model="store.$state.dataForm.commentsDeveloper"
+          v-model="store.$state.dataForm.dataForm.commentsDeveloper"
           title-label="Комментарии о застройщике"
       />
     </div>
     <div :class="$style.rightPart">
       <BaseInput
-          v-model="store.$state.dataForm.maximumApartmentAmount"
+          v-model="store.$state.dataForm.dataForm.maximumApartmentAmount"
           :class="$style.mb10"
           placeholder=""
           title-label="Максимальная сумма жилья"
       />
       <BaseInput
-          v-model="store.$state.dataForm.interestRate"
+          v-model="store.$state.dataForm.dataForm.interestRate"
           :class="$style.mb10"
           placeholder=""
           title-label="Cтавка - %"
       />
       <BaseInput
-          v-model="store.$state.dataForm.downPayment"
+          v-model="store.$state.dataForm.dataForm.downPayment"
           :class="$style.mb10"
           placeholder=""
           title-label="Первоначальный взнос"
       />
       <BaseInput
-          v-model="store.$state.dataForm.mortgageTerm"
+          v-model="store.$state.dataForm.dataForm.mortgageTerm"
           placeholder=""
           title-label="Срок ипотеки"
       />
       <BaseInput
-          v-model="store.$state.dataForm.overpayment"
+          v-model="store.$state.dataForm.dataForm.overpayment"
           :class="$style.mb10"
           placeholder=""
           title-label="Переплата"
       />
-      <div v-if="v$.developerName.$error">Name field has an error.</div>111111
-      <pre>{{ v$.developerName.$error.$message}}</pre>
     </div>
   </div>
 </template>
@@ -68,16 +65,6 @@ const store = storeDataForm();
 //   (e: 'change', id: number): void
 //   (e: 'update', value: string): void
 // }>()
-
-interface IFormData {
-  nameDeveloper:string
-}
-const nameDeveloper = ref('');
-
-const formData = reactive<IFormData>({
-  nameDeveloper:''
-})
-console.log(nameDeveloper)
 </script>
 
 <style module>

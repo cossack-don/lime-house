@@ -8,6 +8,10 @@
        </h1>
        <a href="#form" :class="$style.link">Хочу заполнить и распечатать</a>
      </div>
+
+    </div>
+    <div :class="$style.cont" >
+      <img src="@/assets/man.png" alt="" width="200">
     </div>
   </section>
 </template>
@@ -62,5 +66,12 @@
   cursor: pointer;
   border: 2px solid #f0f3f6;
   background: #f0f3f6;
+}
+
+.cont {
+  margin-left: auto;
+  margin-bottom: auto;
+  margin-top: 25px;
+  margin-right: 25px;
 }
 </style>

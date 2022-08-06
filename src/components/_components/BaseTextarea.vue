@@ -76,7 +76,7 @@ const updateInput = (e:ISyntheticEvent<HTMLInputElement>) => {
 }
 
 .textarea:disabled {
-  opacity: 0.2;
+  opacity: 0.4;
 }
 
 .label {
