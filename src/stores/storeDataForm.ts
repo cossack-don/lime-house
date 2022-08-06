@@ -1,16 +1,14 @@
 import { defineStore} from 'pinia'
-import { listlistCriterial } from '@/stores/dataComments'
+import { dataComments } from '@/stores/dataComments'
 import { dataForm } from "@/stores/dataForm";
 
 export const storeDataForm = defineStore("dataForm", {
     state: () => {
         return {
-            dataForm:{
                 // Block-first-form
-                listlistCriterial,
+                dataComments,
                 // Block-second-form
                 dataForm
-            }
         }
     }
 })

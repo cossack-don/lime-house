@@ -18,7 +18,6 @@
 
 <script lang="ts" setup>
 import { defineProps, defineEmits } from 'vue';
-import { IBaseCheckbox } from "@/components/_components/interfaces";
 
 const emit = defineEmits(['update:checked']);
 
@@ -62,8 +61,6 @@ const props = defineProps({
   width: 16px;
   height: 16px;
   margin: 0;
-  -moz-appearance: none;
-  -webkit-appearance: none;
   appearance: none;
   background-color: #ffffff;
   border: 2px solid #08a652;

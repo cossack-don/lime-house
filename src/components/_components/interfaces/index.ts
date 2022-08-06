@@ -10,10 +10,10 @@ export interface IBaseCheckbox {
 }
 
 export interface  IBaseTextarea {
-    modelValue: string | number;
-    disabled: boolean;
-    titleLabel: string;
-    placeholder: string;
+    modelValue?: string | number;
+    disabled?: boolean;
+    titleLabel?: string;
+    placeholder?: string;
 }
 
 export interface IBaseInput {

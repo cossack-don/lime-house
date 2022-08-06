@@ -3,23 +3,23 @@
       <div>
         <div>
           <div :class="$style.cardContainer" id="demo">
-            <a href="#" :class="$style.link" ><h2>Cars</h2>
+            <a href="#" :class="$style.link" ><h2>Семейная ипотека</h2>
               <img src="@/assets/product-step-5.svg" width="100%">
             </a>
             <a href="#" :class="$style.link">
-              <h2>Shop</h2>
+              <h2>Ипотека для IT</h2>
               <img src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/business_shop_qw5t.svg" width="100%">
             </a>
             <a href="#" :class="$style.link">
-              <h2>Building</h2>
+              <h2>Новостройка</h2>
               <img src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/apartment_rent_o0ut.svg" width="100%">
             </a>
             <a href="#" :class="$style.link">
-              <h2>Work</h2>
+              <h2>Вторичное жильё</h2>
               <img src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/work_time_lhoj.svg" width="100%">
             </a>
             <a href="#" :class="$style.link">
-              <h2>Hospitals</h2>
+              <h2>Господдержка</h2>
               <img src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/doctors_hwty.svg" width="100%">
             </a>
             <a href="#" :class="$style.link" >

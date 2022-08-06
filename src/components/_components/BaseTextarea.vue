@@ -1,7 +1,7 @@
 <template>
   <div>
     <label :class="$style.label">
-      <p :class="$style.text">{{ props.titleLabel }}</p>
+      <span :class="$style.text">{{ props.titleLabel }}</span>
       <textarea
           :disabled="props.disabled"
           :class="$style.textarea"
@@ -16,7 +16,6 @@
 
 <script setup lang="ts">
 import { defineEmits, defineProps } from 'vue';
-import { IBaseTextarea } from '@/components/_components/interfaces';
 
 const props = defineProps({
   modelValue: {

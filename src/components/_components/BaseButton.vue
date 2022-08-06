@@ -11,14 +11,14 @@
 </template>
 
 <script setup lang="ts">
-import {defineProps, watchEffect, toRefs, watch} from 'vue';
+import { defineProps } from 'vue';
 import { IBaseButton } from '@/components/_components/interfaces';
-// ОШИБКУ КИДЕТ СМ СКОБКУ https://vuejs.org/guide/extras/reactivity-transform.html#refs-vs-reactive-variables
 
+// TODO Ошибка при деструкторизации и когда задаем default значения. Нужно исправлять
+// ОШИБКУ КИДЕТ СМ СКОБКУ https://vuejs.org/guide/extras/reactivity-transform.html#refs-vs-reactive-variables
 // const props = defineProps<IBaseButton>();
 //https:cumsum.wordpress.com/2020/05/08/destructure-reactive-object-and-maintain-reactivity-in-vue-3/
 // const props = defineProps<IBaseButton>()
-//
 // const { disabled = false } = toRefs(props)
 // watch((disabled,( v, nv)) => {
 // console.log(disabled)

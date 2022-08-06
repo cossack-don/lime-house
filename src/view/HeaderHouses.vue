@@ -36,6 +36,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  box-shadow: 0px 20px 9px 0px rgb(34 60 80 / 23%);
 }
 
 .wrapperText {

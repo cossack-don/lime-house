@@ -2,54 +2,54 @@
 <div :class="$style.wrapper">
     <div :class="$style.leftPart" >
       <BaseInput
-          v-model="store.$state.dataForm.dataForm.developerName"
+          v-model="store.$state.dataForm.developerName"
           :class="$style.mb10"
           placeholder=""
           title-label="Название застройщика"
       />
       <BaseInput
-          v-model="store.$state.dataForm.dataForm.urlDeveloperName"
+          v-model="store.$state.dataForm.urlDeveloperName"
           :class="$style.mb10"
           placeholder=""
           title-label="Сайт застройщика - url"
       />
       <BaseInput
-          v-model="store.$state.dataForm.dataForm.phone"
+          v-model="store.$state.dataForm.phone"
           :class="$style.mb10"
           placeholder=""
           title-label="Телефон"
       />
       <BaseTextarea
-          v-model="store.$state.dataForm.dataForm.commentsDeveloper"
+          v-model="store.$state.dataForm.commentsDeveloper"
           title-label="Комментарии о застройщике"
       />
     </div>
     <div :class="$style.rightPart">
       <BaseInput
-          v-model="store.$state.dataForm.dataForm.maximumApartmentAmount"
+          v-model="store.$state.dataForm.maximumApartmentAmount"
           :class="$style.mb10"
           placeholder=""
           title-label="Максимальная сумма жилья"
       />
       <BaseInput
-          v-model="store.$state.dataForm.dataForm.interestRate"
+          v-model="store.$state.dataForm.interestRate"
           :class="$style.mb10"
           placeholder=""
           title-label="Cтавка - %"
       />
       <BaseInput
-          v-model="store.$state.dataForm.dataForm.downPayment"
+          v-model="store.$state.dataForm.downPayment"
           :class="$style.mb10"
           placeholder=""
           title-label="Первоначальный взнос"
       />
       <BaseInput
-          v-model="store.$state.dataForm.dataForm.mortgageTerm"
+          v-model="store.$state.dataForm.mortgageTerm"
           placeholder=""
           title-label="Срок ипотеки"
       />
       <BaseInput
-          v-model="store.$state.dataForm.dataForm.overpayment"
+          v-model="store.$state.dataForm.overpayment"
           :class="$style.mb10"
           placeholder=""
           title-label="Переплата"
@@ -61,7 +61,6 @@
 <script setup lang="ts">
 import BaseInput from '@/components/_components/BaseInput.vue';
 import BaseTextarea from '@/components/_components/BaseTextarea.vue';
-import { reactive, defineEmits, ref } from "vue";
 import { storeDataForm } from '@/stores/storeDataForm';
 
 const store = storeDataForm();

@@ -1,13 +1,13 @@
 <template>
   <div :class="$style.wrapper">
-    <div :class="$style.item" v-for="(item, index) in store.$state.dataForm.listlistCriterial" :key="index">
+    <div :class="$style.item" v-for="(item, index) in store.$state.dataComments" :key="index">
       <div style="display: flex; justify-content: space-between">
         <!-- checkbox -->
         <BaseCheckBox v-model:checked="item.checked" :labelText="item.label"/>
         <!-- tooltip -->
         <div :class="$style.toolTip">
           <img src="@/assets/icon-quastion.svg" alt="">
-          <div :class="$style.www"><b>Описание:</b> {{item.textTooltip}}</div>
+          <div :class="$style.toolTipText"><b>Описание:</b> {{item.textTooltip}}</div>
         </div>
       </div>
       <!-- textarea -->
@@ -45,7 +45,6 @@ const store = storeDataForm();
   width: 25px;
   height: 25px;
   border-radius: 8px;
-
   position: relative;
 }
 
@@ -53,7 +52,7 @@ const store = storeDataForm();
   cursor: pointer;
 }
 
-.www {
+.toolTipText {
   position: absolute;
   margin-top: 5px;
   left: 30px;
@@ -72,11 +71,11 @@ const store = storeDataForm();
   font-style: italic;
 }
 
-.www:hover {
+.toolTipText:hover {
   transition: 0.5s;
 }
 
-.www:before {
+.toolTipText:before {
   content: '';
   position: absolute;
   width: 20px;
@@ -88,7 +87,7 @@ const store = storeDataForm();
   z-index: -1;
 }
 
-.toolTip:hover .www{
+.toolTip:hover .toolTipText{
   visibility: visible;
   opacity: 1;
 }

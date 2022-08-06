@@ -21,12 +21,7 @@
 
 <script lang="ts" setup>
 import { defineProps, defineEmits } from 'vue';
-import { IBaseInput } from "@/components/_components/interfaces";
-// modelValue?: string | number;
-// type?: string;
-// placeholder?: string;
-// titleLabel?: string;
-// disabled?: boolean;
+
 const props = defineProps({
   modelValue: {
     type: [String, Number],

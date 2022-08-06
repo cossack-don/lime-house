@@ -1,6 +1,6 @@
 import { IDataComments } from '@/stores/interfaces/dataComments'
 
-export const listlistCriterial:IDataComments[] = [
+export const dataComments:IDataComments[] = [
     {
         id:1,
         comments:'1',
@@ -55,7 +55,7 @@ export const listlistCriterial:IDataComments[] = [
         comments:'2',
         checked:false,
         textTooltip:'TEXT-4',
-        label: 'Есть ли узастройщика аккредитация банков',
+        label: 'Аккредитован ластройщик',
     },
     {
         id:9,
@@ -63,5 +63,12 @@ export const listlistCriterial:IDataComments[] = [
         checked:false,
         textTooltip:'TEXT-4',
         label: 'Планеровка',
+    },
+    {
+        id:9,
+        comments:'2',
+        checked:false,
+        textTooltip:'TEXT-4',
+        label: 'Отзывы о компании',
     },
 ];

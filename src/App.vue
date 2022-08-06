@@ -22,14 +22,14 @@ import HeaderHouses from '@/view/HeaderHouses.vue';
 import Cards from '@/view/Cards.vue';
 import Item from '@/components/Item.vue';
 import { storeDataForm } from '@/stores/storeDataForm';
-import { pdf } from '@/utils/generatePDF';
+import { pdf } from '@/utils';
 
 
 const store = storeDataForm();
 
 const generatePDF =  () => {
-
-  const values = Object.values(store.$state.dataForm.dataForm);
+console.log(store.$state)
+  const values = Object.values(store.$state.dataForm);
 
 
 
@@ -57,7 +57,7 @@ const generatePDF =  () => {
 
   pdf.setFontSize(14)
   let count = 70
-  store.$state.dataForm.listlistCriterial.forEach((item) => {
+  store.$state.dataComments.forEach((item) => {
     pdf.text(  `
     ${item.label}:
     ${item.comments}
