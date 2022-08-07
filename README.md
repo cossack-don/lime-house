@@ -16,7 +16,8 @@
 - [TypeScript](https://www.typescriptlang.org/)
 - [Vue 3](https://v3.ru.vuejs.org/ru/)
 
-
+Черновой вариант - Preview
+![demo](draft-prewie.png)
 
 ## Установка зависимостей
 ```
