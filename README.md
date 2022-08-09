@@ -16,6 +16,23 @@
 - [TypeScript](https://www.typescriptlang.org/)
 - [Vue 3](https://v3.ru.vuejs.org/ru/)
 
+### Helpers по jsPDF
+
+- Перенос текста
+const splitTitle = doc.splitTextToSize(reportTitle, 180);
+doc.text(15, 20, splitTitle);
+- Добавить 2-й лист PDF doc.addPage("a4");
+- Шрифт, жирный, италик, и т.д. под ru 
+doc.setFont("PTSans", 'italic');
+doc.setFontSize(10);
+doc.text("А ну чики брики и в дамки!", 10, 10);
+- Вставка картинки, в правый угол PDF
+doc.addImage("examples/images/Octonyan.jpg", "JPEG", 165, 5, 40, 40);
+- Цвет текста
+doc.setTextColor(150);
+doc.text("This is light gray.", 20, 30);
+- Другие примеры - http://raw.githack.com/MrRio/jsPDF/master/index.html#
+
 Черновой вариант - Preview
 ![demo](draft-prewie.png)
 
