@@ -4,7 +4,7 @@
   <div :class="$style.app">
     <h2 :class="$style.title">Подборка критериев:</h2>
 
-    <form id="form" :class="$style.wrapper" @submit.prevent="generatePDF">
+    <form id="form" :class="$style.wrapper" @submit.prevent="downloadPDF">
       <Item/>
       <CardDeveloper/>
       <BaseButton :class="$style.buttonSubmit" type="submit" title="Сформировать PDF" />
@@ -23,50 +23,52 @@ import Cards from '@/view/Cards.vue';
 import Item from '@/components/Item.vue';
 import { storeDataForm } from '@/stores/storeDataForm';
 import { pdf } from '@/utils';
+import { generationPDF } from '@/utils/templatePDF';
 
 
 const store = storeDataForm();
 
-const generatePDF =  () => {
-console.log(store.$state)
-  const values = Object.values(store.$state.dataForm);
-
-
-
-
-  pdf.setFontSize(18)
-  pdf.text('Список приоритетных условий, при покупке квартиры', 10,10, );
-
-  pdf.setFontSize(14)
-  pdf.text(
-   `
-   Название застройщика:
-
-   ${values[0]}
-
-   Ссылка на застройщика или их предлжения -
-   ${values[1]}
-   Омментарий о застройщике - ${values[2]}
-   Максимальная сумма квартиры - ${values[3]}
-   Процентная ставка - ${values[4]}
-   Срок ипотеки - ${values[5]}
-   Первоначальный взнос - ${values[6]}
-   Переплата - ${values[7]}
-  `
-      , 10, 20);
-
-  pdf.setFontSize(14)
-  let count = 70
-  store.$state.dataComments.forEach((item) => {
-    pdf.text(  `
-    ${item.label}:
-    ${item.comments}
-    `, 10, count);
-    count+=15
-  })
-
-
-  pdf.save("a4.pdf");
+const downloadPDF =  () => {
+  generationPDF()
+// console.log(store.$state)
+//   const values = Object.values(store.$state.dataForm);
+//
+//
+//
+//
+//   pdf.setFontSize(18)
+//   pdf.text('Список приоритетных условий, при покупке квартиры', 10,10, );
+//
+//   pdf.setFontSize(14)
+//   pdf.text(
+//    `
+//    Название застройщика:
+//
+//    ${values[0]}
+//
+//    Ссылка на застройщика или их предлжения -
+//    ${values[1]}
+//    Омментарий о застройщике - ${values[2]}
+//    Максимальная сумма квартиры - ${values[3]}
+//    Процентная ставка - ${values[4]}
+//    Срок ипотеки - ${values[5]}
+//    Первоначальный взнос - ${values[6]}
+//    Переплата - ${values[7]}
+//   `
+//       , 10, 20);
+//
+//   pdf.setFontSize(14)
+//   let count = 70
+//   store.$state.dataComments.forEach((item) => {
+//     pdf.text(  `
+//     ${item.label}:
+//     ${item.comments}
+//     `, 10, count);
+//     count+=15
+//   })
+//
+//
+//   pdf.save("a4.pdf");
 }
 </script>
 

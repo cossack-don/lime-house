@@ -4,7 +4,14 @@
 // https://rawgit.com/MrRio/jsPDF/master/fontconverter/fontconverter.html
 import { jsPDF } from "jspdf";
 import { amiriFont } from "@/utils/fontAmiriRegular";
+import { PTSansWebRegular } from "@/utils/PTSansWebRegular";
+import { PTSansWebBold } from "@/utils/PTSansWebBold";
+import { PTSansWebBoldItalic } from "@/utils/PTSansWebBoldItalic";
+import { PTSansWebRegularItalic } from "@/utils/PTSansWebRegularItalic";
 
+// TODO ссылка где качать шрифты - https://fonts-online.ru/fonts?page=2
+// Попробовать дугие установить
+// https://rawgit.com/MrRio/jsPDF/master/fontconverter/fontconverter.html
 export  const pdf = new jsPDF();
 
 // Шрифты, чтобы поддерживал русский язык
@@ -13,4 +20,31 @@ pdf.addFont("Amiri-Regular.ttf", "Amiri", "normal");
 pdf.setFont("Amiri", 'normal');
 pdf.setFontSize(14)
 
+// Шрифты, чтобы поддерживал русский язык
+// pdf.addFileToVFS("Amiri-bold-normal.ttf", fontAmiriBold);
+// pdf.addFont("Amiri-bold-normal.ttf", "Amiri2", "bold");
+// pdf.setFont("Amiri-bold", 'bold');
 
+// Regular
+pdf.addFileToVFS('PT_Sans-Web-Regular-normal.ttf', PTSansWebRegular);
+pdf.addFont('PT_Sans-Web-Regular-normal.ttf', 'PT_Sans-Web-Regular', 'normal');
+pdf.setFont("PT_Sans-Web-Regular", 'normal');
+pdf.setFontSize(14);
+
+// Bold
+pdf.addFileToVFS('PT_Sans-Web-Bold-normal.ttf', PTSansWebBold);
+pdf.addFont('PT_Sans-Web-Bold-normal.ttf', 'PT_Sans-Web-Bold', 'normal');
+pdf.setFont("PT_Sans-Web-Bold", 'normal');
+pdf.setFontSize(14);
+
+// Bold italic
+pdf.addFileToVFS('PT_Sans-Web-BoldItalic-normal.ttf', PTSansWebBoldItalic);
+pdf.addFont('PT_Sans-Web-BoldItalic-normal.ttf', 'PT_Sans-Web-BoldItalic', 'normal');
+pdf.setFont("PT_Sans-Web-BoldItalic", 'normal');
+pdf.setFontSize(14);
+
+// Regular italic
+pdf.addFileToVFS('PT_Sans-Web-Italic-normal.ttf', PTSansWebRegularItalic);
+pdf.addFont('PT_Sans-Web-Italic-normal.ttf', 'PT_Sans-Web-Italic', 'normal');
+pdf.setFont("PT_Sans-Web-Italic", 'normal');
+pdf.setFontSize(14);
