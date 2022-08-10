@@ -29,12 +29,11 @@ import { generationPDF } from '@/utils/templatePDF';
 
 const store = storeDataForm();
 
-const downloadPDF =  (e) => {
+const downloadPDF =  () => {
 
-  setTimeout(function(){
-    location.reload();
-  }, 0);
   generationPDF()
+
+  location.reload();
 
 //  TODO Нужно отправлять + на бекенд в БД - если вдруг криво на пдф ляжет, чтобы вытащить с БД
 // console.log(store.$state)
