@@ -12,60 +12,115 @@ export const generationPDF = () => {
 
  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
  // @ts-ignore
- pdf.text("Список приоритетных условий, при покупке квартиры", 105, 15, null, null, 'center');
+ pdf.text("Список приоритетных условий, при покупке недвижимости", 105, 15, null, null, 'center');
 
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
  pdf.setFontSize(14);
  pdf.text('Название застройщика:', 10, 40);
  pdf.setFont("PT_Sans-Web-Regular", 'normal');
  pdf.text('ГК ПИК', 10, 48);
- pdf.text("Максимальная сумма жилья - 10 000 000 руб.", 100, 40);
+
+ // Максимальная сумма жилья
+ pdf.setFont("PT_Sans-Web-Bold", 'normal');
+ pdf.text("Максимальная сумма жилья -", 100, 40);
+ pdf.setFont("PT_Sans-Web-Regular", 'normal');
+ pdf.text('10 000 000 руб.', 166, 40);
 
  pdf.setTextColor("blue");
- pdf.textWithLink("Сайт застройщика - кликни", 10, 58, {
+ pdf.textWithLink("Сайт застройщика - ссылка", 10, 58, {
   url:'https://www.pik.ru/'
  });
- pdf.setTextColor("black");
- pdf.text("Процентная ставка - 15.6 %", 100, 50);
 
+ // Процентная ставка
+ pdf.setTextColor("black");
+ pdf.setFont("PT_Sans-Web-Bold", 'normal');
+ pdf.text("Процентная ставка -", 100, 50);
+ pdf.setFont("PT_Sans-Web-Regular", 'normal');
+ pdf.text('15.6 %', 146, 50);
+
+ //Телефон
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
  pdf.text("Телефон: ", 10, 68);
  pdf.setFont("PT_Sans-Web-Regular", 'normal');
  pdf.text("8-933-003-00-22", 32, 68);
- pdf.text("Первоначальный взнос - 15% или 1 500 000 руб.", 100, 60);
+ //Первоначальный взнос
+ pdf.setFont("PT_Sans-Web-Bold", 'normal');
+ pdf.text("Первоначальный взнос -", 100, 60);
+ pdf.setFont("PT_Sans-Web-Regular", 'normal');
+ pdf.text("1 500 000 руб.", 155, 60);
 
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
  pdf.text("Комментарий о застройщике:", 10, 78);
  pdf.setFont("PT_Sans-Web-Regular", 'normal');
- pdf.text( pdf.splitTextToSize('описание-коммент-описание-коммент-описание-коммент-описание-коммент-описание-коммент', 66), 10, 85);
- pdf.text("Срок ипотеки - 30 лет ( например 20 месяцев)", 100, 70);
+ pdf.text(
+     pdf.splitTextToSize('описание-коммент-описание-коммент-описание-коммент-описание-коммент-описание-коммент', 66),
+     10, 85);
+
+ pdf.setFont("PT_Sans-Web-Bold", 'normal');
+ pdf.text("Срок ипотеки -", 100, 70);
+ pdf.setFont("PT_Sans-Web-Regular", 'normal');
+ pdf.text("30 лет", 133, 70);
 
 
+ // Список критериев
+ pdf.setFont("PT_Sans-Web-Bold", 'normal');
+ pdf.text("Заголовок:", 10, 130);
+ pdf.setFont("PT_Sans-Web-Regular", 'normal');
+ pdf.text(
+     pdf.splitTextToSize('ЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовок', 180),
+     10, 136);
 
- pdf.text("Переплата - 10 000 000 руб.", 100, 80);
+ // Список критериев 2
+ pdf.setFont("PT_Sans-Web-Bold", 'normal');
+ pdf.text("Заголовок2:", 10, 160);
+ pdf.setFont("PT_Sans-Web-Regular", 'normal');
+ pdf.text(
+     pdf.splitTextToSize('ЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовок', 180),
+     10, 166);
 
- // pdf.setFont("helvetica", "bold");
- // pdf.text("ЫЫЫ.", 20, 30);
- // pdf.setFont("helvetica", "normal");
- // pdf.text("This is client-side Javascript, pumping out a PDF.", 20, 40);
- //
- // pdf.setLineWidth(0.1);
- // pdf.line(20, 20, 170, 20); // horizontal line
- //
- // pdf.addImage()лого в правый угол
- // pdf.setFont("helvetica", "bold");
- // pdf.text("Ttitle", 20, 50);
- // pdf.setFont("helvetica", "normal");
- pdf.text(storeDataForm().$state.dataForm.phone, 20, 60);
+ // Список критериев 3
+ pdf.setFont("PT_Sans-Web-Bold", 'normal');
+ pdf.text("Заголовок3:", 10, 190);
+ pdf.setFont("PT_Sans-Web-Regular", 'normal');
+ pdf.text(
+     pdf.splitTextToSize('ЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовок', 180),
+     10, 196);
+
+ // Список критериев 4
+ pdf.setFont("PT_Sans-Web-Bold", 'normal');
+ pdf.text("Заголовок4:", 10, 220);
+ pdf.setFont("PT_Sans-Web-Regular", 'normal');
+ pdf.text(
+     pdf.splitTextToSize('ЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовок', 180),
+     10, 226);
+
+ // Список критериев 5
+ pdf.setFont("PT_Sans-Web-Bold", 'normal');
+ pdf.text("Заголовок5:", 10, 250);
+ pdf.setFont("PT_Sans-Web-Regular", 'normal');
+ pdf.text(
+     pdf.splitTextToSize('ЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовок', 180),
+     10, 256);
+
+ // Список критериев 5
+ pdf.setFont("PT_Sans-Web-Bold", 'normal');
+ pdf.text("Заголовок5:", 10, 280);
+ pdf.setFont("PT_Sans-Web-Regular", 'normal');
+ pdf.text(
+     pdf.splitTextToSize('ЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовок', 180),
+     10, 286);
+
+
+ pdf.addPage("a4");
+ // Список критериев 5
+ pdf.setFont("PT_Sans-Web-Bold", 'normal');
+ pdf.text("Заголовок5:", 10, 20);
+ pdf.setFont("PT_Sans-Web-Regular", 'normal');
+ pdf.text(
+     pdf.splitTextToSize('ЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовок', 180),
+     10, 26);
+ // pdf.text(storeDataForm().$state.dataForm.phone, 20, 60);
  pdf.save("a4.pdf");
- // pdf.setLineWidth(0.1);
- // pdf.line(20, 45, 190, 45); // horizontal line
- //
- // pdf.addPage("a4");
- //
- // pdf.text("page - 2", 20, 15);
-
-  
 }
 
 //
