@@ -1,15 +1,14 @@
 // шаблон для А4 PDF
-
-// Данную функцию импортируем в компонент где generate pdf for click button
 import { pdf } from '@/utils';
 import { storeDataForm } from '@/stores/storeDataForm';
 
-export const generationPDF = () => {
 
+
+export const generationPDF = () => {
+ const stateDataForm = storeDataForm().$state;
  // TODO Заголовок в документе
  pdf.setFont("PT_Sans-Web-Italic", 'normal');
  pdf.setFontSize(20);
-
  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
  // @ts-ignore
  pdf.text("Список приоритетных условий, при покупке недвижимости", 105, 15, null, null, 'center');
@@ -18,13 +17,13 @@ export const generationPDF = () => {
  pdf.setFontSize(14);
  pdf.text('Название застройщика:', 10, 40);
  pdf.setFont("PT_Sans-Web-Regular", 'normal');
- pdf.text('ГК ПИК', 10, 48);
+ pdf.text(`${stateDataForm.dataForm.developerName}`, 10, 48);
 
  // Максимальная сумма жилья
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
  pdf.text("Максимальная сумма жилья -", 100, 40);
  pdf.setFont("PT_Sans-Web-Regular", 'normal');
- pdf.text('10 000 000 руб.', 166, 40);
+ pdf.text(`${stateDataForm.dataForm.maximumApartmentAmount} руб.`, 166, 40);
 
  pdf.setTextColor("blue");
  pdf.textWithLink("Сайт застройщика - ссылка", 10, 58, {
@@ -121,6 +120,7 @@ export const generationPDF = () => {
      10, 26);
  // pdf.text(storeDataForm().$state.dataForm.phone, 20, 60);
  pdf.save("a4.pdf");
+
 }
 
 //

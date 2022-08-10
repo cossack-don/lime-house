@@ -6,6 +6,7 @@
 
     <form id="form" :class="$style.wrapper" @submit.prevent="downloadPDF">
       <Item/>
+      {{store.$state.dataForm}}2
       <CardDeveloper/>
       <BaseButton :class="$style.buttonSubmit" type="submit" title="Сформировать PDF" />
     </form>
@@ -28,13 +29,26 @@ import { generationPDF } from '@/utils/templatePDF';
 
 const store = storeDataForm();
 
-const downloadPDF =  () => {
+const downloadPDF =  (e) => {
+
+  setTimeout(function(){
+    location.reload();
+  }, 0);
   generationPDF()
+
+//  TODO Нужно отправлять + на бекенд в БД - если вдруг криво на пдф ляжет, чтобы вытащить с БД
 // console.log(store.$state)
 //   const values = Object.values(store.$state.dataForm);
 //
-//
-//
+
+  for(let k in store.$state.dataForm) {
+   store.$state.dataForm[k] = ''
+  }
+  const pageCount = pdf.internal.getNumberOfPages();
+  pdf.deletePage(2)
+
+
+
 //
 //   pdf.setFontSize(18)
 //   pdf.text('Список приоритетных условий, при покупке квартиры', 10,10, );

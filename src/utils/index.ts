@@ -12,7 +12,8 @@ import { PTSansWebRegularItalic } from "@/utils/PTSansWebRegularItalic";
 // TODO ссылка где качать шрифты - https://fonts-online.ru/fonts?page=2
 // Попробовать дугие установить
 // https://rawgit.com/MrRio/jsPDF/master/fontconverter/fontconverter.html
-export  const pdf = new jsPDF();
+
+export  const pdf = new jsPDF( );
 
 // Шрифты, чтобы поддерживал русский язык
 pdf.addFileToVFS("Amiri-Regular.ttf", amiriFont);
