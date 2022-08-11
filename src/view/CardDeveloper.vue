@@ -48,12 +48,6 @@
           placeholder=""
           title-label="Срок ипотеки"
       />
-      <BaseInput
-          v-model="store.$state.dataForm.overpayment"
-          :class="$style.mb10"
-          placeholder=""
-          title-label="Переплата"
-      />
     </div>
   </div>
 </template>
