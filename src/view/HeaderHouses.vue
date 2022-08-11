@@ -1,8 +1,7 @@
 <template>
-  <div :class="$style.header">
-    <h2>Сервис - </h2>
+  <div :class="[$style.header, $style.cont]">
     <img :class="$style.logo" src="@/assets/lime.svg" alt="">
-    Lime-Mortgage
+    <h2>Lime House</h2>
   </div>
   <section :class="$style.bgHouses">
 
@@ -15,9 +14,9 @@
      </div>
 
     </div>
-    <div :class="$style.cont" >
-      <img src="@/assets/man.png" alt="" width="200">
-    </div>
+<!--    <div :class="$style.cont" >-->
+<!--      <img src="@/assets/man.png" alt="" width="200">-->
+<!--    </div>-->
   </section>
 </template>
 
@@ -79,7 +78,7 @@ border-radius: 50%;
   z-index: 0;
   margin-left: auto;
   margin-bottom: auto;
-  margin-top: 25px;
+  /*margin-top: 25px;*/
   margin-right: 25px;
 }
 
@@ -97,7 +96,7 @@ border-radius: 50%;
   animation: glowing 20s linear infinite;
   opacity: 0;
   transition: opacity .3s ease-in-out;
-  border-radius: 50%;
+  /*border-radius: 50%;*/
 }
 
 .cont:before {
@@ -129,13 +128,14 @@ border-radius: 50%;
 }
 
 .header {
+  width: 100%;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
   padding: 5px;
-  color:#08a652;
+  color:#ffffff;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
 }
 </style>
