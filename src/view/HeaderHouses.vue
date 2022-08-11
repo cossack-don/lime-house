@@ -1,4 +1,9 @@
 <template>
+  <div :class="$style.header">
+    <h2>Сервис - </h2>
+    <img :class="$style.logo" src="@/assets/lime.svg" alt="">
+    Lime-Mortgage
+  </div>
   <section :class="$style.bgHouses">
 
     <div :class="$style.wrapper">
@@ -114,5 +119,23 @@ border-radius: 50%;
   0% { background-position: 0 0; }
   50% { background-position: 400% 0; }
   100% { background-position: 0 0; }
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  margin-left: 8px;
+}
+
+.header {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 5px;
+  color:#08a652;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 </style>
