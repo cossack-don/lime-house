@@ -1,6 +1,7 @@
 <template>
 <div :class="$style.wrapper">
     <div :class="$style.leftPart" >
+
       <BaseInput
           v-model="store.$state.dataForm.developerName"
           :class="$style.mb10"
@@ -17,6 +18,7 @@
           v-model="store.$state.dataForm.phone"
           :class="$style.mb10"
           placeholder=""
+          v-maska="'+7-###-###-##-##'"
           title-label="Телефон"
       />
       <BaseTextarea
@@ -29,6 +31,7 @@
           v-model="store.$state.dataForm.maximumApartmentAmount"
           :class="$style.mb10"
           placeholder=""
+          v-maska="'## ### ###'"
           title-label="Максимальная сумма жилья"
       />
       <BaseInput
@@ -36,17 +39,20 @@
           :class="$style.mb10"
           placeholder=""
           title-label="Cтавка - %"
+          v-maska="'##,##'"
       />
       <BaseInput
           v-model="store.$state.dataForm.downPayment"
           :class="$style.mb10"
           placeholder=""
+          v-maska="'## ### ###'"
           title-label="Первоначальный взнос"
       />
       <BaseInput
           v-model="store.$state.dataForm.mortgageTerm"
           placeholder=""
-          title-label="Срок ипотеки"
+          title-label="Срок ипотеки - в годах"
+          v-maska="'## лет'"
       />
     </div>
   </div>
