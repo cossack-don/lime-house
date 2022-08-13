@@ -69,7 +69,6 @@
 }
 
 .cont {
-border-radius: 50%;
   border: none;
   outline: none;
   color: #fff;
@@ -87,7 +86,7 @@ border-radius: 50%;
   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
   position: absolute;
   top: -2px;
-  left:-2px;
+  left:-4px;
   background-size: 400%;
   z-index: -1;
   filter: blur(5px);
@@ -111,7 +110,7 @@ border-radius: 50%;
   height: 100%;
   left: 0;
   top: 0;
-  border-radius: 50%;
+  /*border-radius: 50%;*/
 }
 
 @keyframes glowing {

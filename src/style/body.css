@@ -17,6 +17,5 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #08a652;    /* цвет плашки */
-    border-radius: 20px;       /* закругления плашки */
+    background-color: #9cebc1;    /* цвет плашки */
 }
