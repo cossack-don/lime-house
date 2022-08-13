@@ -1,5 +1,5 @@
 <template>
-  <div :class="[$style.header, $style.cont]">
+  <div :class="[$style.header, $style.animation]">
     <img :class="$style.logo" src="@/assets/lime.svg" alt="">
     <h2>Lime House</h2>
   </div>
@@ -10,20 +10,13 @@
 </script>
 
 <style module>
-.cont {
+.animation {
   border: none;
-  outline: none;
-  color: #fff;
-  cursor: pointer;
   position: relative;
   z-index: 0;
-  margin-left: auto;
-  margin-bottom: auto;
-  /*margin-top: 25px;*/
-  margin-right: 25px;
 }
 
-.cont:before {
+.animation:before {
   content: '';
   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
   position: absolute;
@@ -37,14 +30,13 @@
   animation: glowing 20s linear infinite;
   opacity: 0;
   transition: opacity .3s ease-in-out;
-  /*border-radius: 50%;*/
 }
 
-.cont:before {
+.animation:before {
   opacity: 1;
 }
 
-.cont:after {
+.animation:after {
   z-index: -1;
   content: '';
   position: absolute;
