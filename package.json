@@ -12,6 +12,7 @@
     "jspdf": "^2.5.1",
     "maska": "^1.5.0",
     "pinia": "^2.0.17",
+    "vee-validate": "^4.6.5",
     "vue": "^3.0.0"
   },
   "devDependencies": {
