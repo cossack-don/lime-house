@@ -6,6 +6,7 @@ import { storeDataForm } from '@/stores/storeDataForm';
 
 export const generationPDF = () => {
  const stateDataForm = storeDataForm().$state;
+
  // TODO Заголовок в документе
  pdf.setFont("PT_Sans-Web-Italic", 'normal');
  pdf.setFontSize(20);
@@ -63,10 +64,10 @@ export const generationPDF = () => {
 
  // Список критериев
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
- pdf.text("Заголовок:", 10, 130);
+ pdf.text("Колличество м² в квартире:", 10, 130);
  pdf.setFont("PT_Sans-Web-Regular", 'normal');
  pdf.text(
-     pdf.splitTextToSize('ЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовок', 180),
+     pdf.splitTextToSize(`${stateDataForm.dataComments[0].comments}`, 180),
      10, 136);
 
  // Список критериев 2
