@@ -54,6 +54,7 @@
           title-label="Срок ипотеки - в годах"
           v-maska="'## лет'"
       />
+      <pre>{{v$.mortgageTerm.$error}}</pre>
     </div>
   </div>
 </template>
@@ -62,7 +63,8 @@
 import BaseInput from '@/components/_components/BaseInput.vue';
 import BaseTextarea from '@/components/_components/BaseTextarea.vue';
 import { storeDataForm } from '@/stores/storeDataForm';
-
+import useVuelidate from '@vuelidate/core'
+import { required, email } from '@vuelidate/validators'
 const store = storeDataForm();
 
 // type-based
@@ -70,6 +72,14 @@ const store = storeDataForm();
 //   (e: 'change', id: number): void
 //   (e: 'update', value: string): void
 // }>()
+const rules = {
+  mortgageTerm: { required,
+    "$message": "Value is required",
+    "$errors": ['test'],
+  }, // Matches state.firstName
+
+}
+const v$ = useVuelidate(rules, store.$state.dataForm)
 </script>
 
 <style module>

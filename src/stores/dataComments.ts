@@ -65,7 +65,21 @@ export const dataComments:IDataComments[] = [
         label: 'Планеровка',
     },
     {
-        id:9,
+        id:10,
+        comments:'2',
+        checked:false,
+        textTooltip:'TEXT-4',
+        label: 'Отзывы о компании',
+    },
+    {
+        id:11,
+        comments:'2',
+        checked:false,
+        textTooltip:'TEXT-4',
+        label: 'Отзывы о компании',
+    },
+    {
+        id:12,
         comments:'2',
         checked:false,
         textTooltip:'TEXT-4',

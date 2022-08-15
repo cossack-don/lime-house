@@ -27,7 +27,7 @@ export const generationPDF = () => {
 
  pdf.setTextColor("blue");
  pdf.textWithLink("Сайт застройщика - ссылка", 10, 58, {
-  url:'https://www.pik.ru/'
+  url:`${stateDataForm.dataForm.urlDeveloperName}`
  });
 
  // Процентная ставка
@@ -35,30 +35,30 @@ export const generationPDF = () => {
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
  pdf.text("Процентная ставка -", 100, 50);
  pdf.setFont("PT_Sans-Web-Regular", 'normal');
- pdf.text('15.6 %', 146, 50);
+ pdf.text(`${stateDataForm.dataForm.interestRate}`, 146, 50);
 
  //Телефон
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
  pdf.text("Телефон: ", 10, 68);
  pdf.setFont("PT_Sans-Web-Regular", 'normal');
- pdf.text("8-933-003-00-22", 32, 68);
+ pdf.text(`${stateDataForm.dataForm.phone}`, 32, 68);
  //Первоначальный взнос
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
  pdf.text("Первоначальный взнос -", 100, 60);
  pdf.setFont("PT_Sans-Web-Regular", 'normal');
- pdf.text("1 500 000 руб.", 155, 60);
+ pdf.text(`${stateDataForm.dataForm.downPayment}`, 155, 60);
 
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
  pdf.text("Комментарий о застройщике:", 10, 78);
  pdf.setFont("PT_Sans-Web-Regular", 'normal');
  pdf.text(
-     pdf.splitTextToSize('описание-коммент-описание-коммент-описание-коммент-описание-коммент-описание-коммент', 66),
+     pdf.splitTextToSize(`${stateDataForm.dataForm.commentsDeveloper}`, 66),
      10, 85);
 
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
  pdf.text("Срок ипотеки -", 100, 70);
  pdf.setFont("PT_Sans-Web-Regular", 'normal');
- pdf.text("30 лет", 133, 70);
+ pdf.text(`${stateDataForm.dataForm.mortgageTerm}`, 133, 70);
 
 
  // Список критериев

@@ -7,5 +7,4 @@ export interface IDataForm {
     mortgageTerm:string;
     interestRate: string;
     downPayment: string;
-    overpayment: string;
 }
