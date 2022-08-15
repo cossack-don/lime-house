@@ -55,7 +55,9 @@
           v-maska="'## лет'"
       />
 <!--      <pre>{{v$.mortgageTerm}}</pre>-->
-      <pre>{{ v$.mortgageTerm.$silentErrors[0].$message }}</pre>
+      <div v-if="!v$.mortgageTerm.$invalid">Name field has an error.</div>
+
+      <pre>{{ v$.mortgageTerm}}</pre>
     </div>
   </div>
 </template>
@@ -74,10 +76,15 @@ const store = storeDataForm();
 //   (e: 'change', id: number): void
 //   (e: 'update', value: string): void
 // }>()
+
 const rules = computed(() => ({
   mortgageTerm: {
     required,
-    minLength: minLength(2)
+    minLength: minLength(2),
+
+      $message:'222',
+
+
   },
 }))
 
