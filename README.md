@@ -25,9 +25,19 @@
 7. Первоначальный взнос
 8. Срок ипотеки
 <br/>
+
+## MVP
+1. Валидация - light
+2. Генерация PDF - прототип
+3. Без адаптива
+4. Базовая форма полей (посмотреть что нужно)
+5. Базовые поля критериев (посмотреть что нужно)
+
 ### Список что нужно сделать
+- изменить пакет vee-validate, для Vue v3 сейчас стоит 2
 - Добавить пакет v-mask https://github.com/beholdr/maska
 - Добавить валидацию для формы [VueValidate](https://vuelidate-next.netlify.app/#getting-started-1),
+-- for Vue - 3, https://vee-validate.logaretm.com/v3 <br/>
   [VeeValidate](https://vee-validate.logaretm.com/v4/guide/composition-api/validation) 
 - Нужно разобраться с props - деструкторизацией + ts
 - Сделать конструктор и корректную вставку в PDF
