@@ -2,8 +2,6 @@
 import { pdf } from '@/utils';
 import { storeDataForm } from '@/stores/storeDataForm';
 
-
-
 export const generationPDF = () => {
  const stateDataForm = storeDataForm().$state;
 
@@ -14,41 +12,45 @@ export const generationPDF = () => {
  // @ts-ignore
  pdf.text("Список приоритетных условий, при покупке недвижимости", 105, 15, null, null, 'center');
 
+ // TODO Название застройщика
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
  pdf.setFontSize(14);
  pdf.text('Название застройщика:', 10, 40);
  pdf.setFont("PT_Sans-Web-Regular", 'normal');
  pdf.text(`${stateDataForm.dataForm.developerName}`, 10, 48);
 
- // Максимальная сумма жилья
+ // TODO Максимальная сумма жилья
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
  pdf.text("Максимальная сумма жилья -", 100, 40);
  pdf.setFont("PT_Sans-Web-Regular", 'normal');
  pdf.text(`${stateDataForm.dataForm.maximumApartmentAmount} руб.`, 166, 40);
 
+ // TODO сайт застройщика
  pdf.setTextColor("blue");
  pdf.textWithLink("Сайт застройщика - ссылка", 10, 58, {
   url:`${stateDataForm.dataForm.urlDeveloperName}`
  });
 
- // Процентная ставка
+ // TODO Процентная ставка
  pdf.setTextColor("black");
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
  pdf.text("Процентная ставка -", 100, 50);
  pdf.setFont("PT_Sans-Web-Regular", 'normal');
  pdf.text(`${stateDataForm.dataForm.interestRate}`, 146, 50);
 
- //Телефон
+ // TODO телефон
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
  pdf.text("Телефон: ", 10, 68);
  pdf.setFont("PT_Sans-Web-Regular", 'normal');
  pdf.text(`${stateDataForm.dataForm.phone}`, 32, 68);
- //Первоначальный взнос
+
+ // TODO первоначальный взнос
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
  pdf.text("Первоначальный взнос -", 100, 60);
  pdf.setFont("PT_Sans-Web-Regular", 'normal');
  pdf.text(`${stateDataForm.dataForm.downPayment}`, 155, 60);
 
+ // TODO Комментарий о застройщике
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
  pdf.text("Комментарий о застройщике:", 10, 78);
  pdf.setFont("PT_Sans-Web-Regular", 'normal');
@@ -56,13 +58,14 @@ export const generationPDF = () => {
      pdf.splitTextToSize(`${stateDataForm.dataForm.commentsDeveloper}`, 66),
      10, 85);
 
+ // TODO Срок ипотеки
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
  pdf.text("Срок ипотеки -", 100, 70);
  pdf.setFont("PT_Sans-Web-Regular", 'normal');
  pdf.text(`${stateDataForm.dataForm.mortgageTerm}`, 133, 70);
 
 
- // Список критериев
+ // TODO Список критериев - stateDataForm.dataComments
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
  pdf.text("Колличество м² в квартире:", 10, 130);
  pdf.setFont("PT_Sans-Web-Regular", 'normal');
@@ -123,31 +126,3 @@ export const generationPDF = () => {
  pdf.save("a4.pdf");
 
 }
-
-//
-// Структура документа PDF
-//
-// page - 1
-//
-//  Заголовок по центру жирным
-// __________________________________________________________________
-//  Название застройщика - ГК ПИК                 Максимальная сумма жилья - 10 000 000 руб.
-//  Сайт застройщика - https://www.pik.ru/       Процентная ставка - 15.6 %
-//  Контактный телефон - 8-933-003-00-22         Первоначальный взнос - 15% или 1 500 000 руб.
-//  Комментарий о застройщике:                   Срок ипотеки - 30 лет ( например 20 месяцев)
-//  ТЕКСТ                                        Переплата - 10 000 000 руб.
-//
-//
-// page - 2
-//
-// Колличество квадратных местров в квартире:
-// описание
-// ___________________________________________
-//
-// Расположение транспорта:
-// описание
-// ____________________________________________
-//
-// и т.д.
-//
-//

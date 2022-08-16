@@ -2,29 +2,26 @@
 // https://github.com/MrRio/jsPDF#use-of-unicode-characters--utf-8
 // https://codepen.io/kuznetsovvn/pen/jOyWMgq?editors=1010
 // https://rawgit.com/MrRio/jsPDF/master/fontconverter/fontconverter.html
-import { jsPDF } from "jspdf";
-import { amiriFont } from "@/utils/fontAmiriRegular";
-import { PTSansWebRegular } from "@/utils/PTSansWebRegular";
-import { PTSansWebBold } from "@/utils/PTSansWebBold";
-import { PTSansWebBoldItalic } from "@/utils/PTSansWebBoldItalic";
-import { PTSansWebRegularItalic } from "@/utils/PTSansWebRegularItalic";
 
 // TODO ссылка где качать шрифты - https://fonts-online.ru/fonts?page=2
 // Попробовать дугие установить
 // https://rawgit.com/MrRio/jsPDF/master/fontconverter/fontconverter.html
 
+import { jsPDF } from "jspdf";
+import { amiriFont } from "@/utils/fonts/fontAmiriRegular";
+import { PTSansWebRegular } from "@/utils/fonts/PTSansWebRegular";
+import { PTSansWebBold } from "@/utils/fonts/PTSansWebBold";
+import { PTSansWebBoldItalic } from "@/utils/fonts/PTSansWebBoldItalic";
+import { PTSansWebRegularItalic } from "@/utils/fonts/PTSansWebRegularItalic";
+
 export  const pdf = new jsPDF( );
 
 // Шрифты, чтобы поддерживал русский язык
+// Amiri-Regular
 pdf.addFileToVFS("Amiri-Regular.ttf", amiriFont);
 pdf.addFont("Amiri-Regular.ttf", "Amiri", "normal");
 pdf.setFont("Amiri", 'normal');
 pdf.setFontSize(14)
-
-// Шрифты, чтобы поддерживал русский язык
-// pdf.addFileToVFS("Amiri-bold-normal.ttf", fontAmiriBold);
-// pdf.addFont("Amiri-bold-normal.ttf", "Amiri2", "bold");
-// pdf.setFont("Amiri-bold", 'bold');
 
 // Regular
 pdf.addFileToVFS('PT_Sans-Web-Regular-normal.ttf', PTSansWebRegular);
