@@ -2,37 +2,41 @@
   <div :class="$style.app">
     <h2 :class="$style.title">Подборка критериев:</h2>
 
-    <form id="form" :class="$style.wrapper" @submit.prevent="downloadPDF">
-      <Item/>
+    <form
+        id="form"
+          :class="$style.wrapper"
+        @submit.prevent="downloadPDF"
+    >
+      <Criterions/>
       <CardDeveloper/>
-      <BaseButton :class="$style.buttonSubmit" type="submit" title="Сформировать PDF" />
+
+      <BaseButton
+          :class="$style.buttonSubmit"
+          type="submit"
+          title="Сформировать PDF"
+      />
     </form>
+
   </div>
 </template>
 
 <script setup lang="ts">
+import { storeDataForm } from '@/stores/storeDataForm';
+import { generationPDF } from '@/utils/templatePDF';
+// components
 import BaseButton from '@/components/_components/BaseButton.vue'
 import CardDeveloper from '@/view/CardDeveloper.vue';
-import Item from '@/components/Item.vue';
-
-
-import { storeDataForm } from '@/stores/storeDataForm';
-import { pdf } from '@/utils';
-import { generationPDF } from '@/utils/templatePDF';
-
+import Criterions from '@/components/Criterions.vue';
 
 const store = storeDataForm();
 
 const downloadPDF =  () => {
 
-  generationPDF()
+  generationPDF();
 
   location.reload();
 
 //  TODO Нужно отправлять + на бекенд в БД - если вдруг криво на пдф ляжет, чтобы вытащить с БД
-// console.log(store.$state)
-//   const values = Object.values(store.$state.dataForm);
-//
 
   for(let k in store.$state.dataForm) {
     store.$state.dataForm[k] = ''

@@ -1,17 +1,29 @@
 <template>
   <div :class="$style.wrapper">
-    <div :class="$style.item" v-for="(item, index) in store.$state.dataComments" :key="index">
+    <div
+        :class="$style.item"
+        v-for="(item, index) in store.$state.dataComments"
+        :key="index"
+    >
       <div style="display: flex; justify-content: space-between">
         <!-- checkbox -->
         <BaseCheckBox v-model:checked="item.checked" :labelText="item.label"/>
         <!-- tooltip -->
         <div :class="$style.toolTip">
           <img src="@/assets/icon-quastion.svg" alt="">
-          <div :class="$style.toolTipText"><b>Описание:</b> {{item.textTooltip}}</div>
+          <div :class="$style.toolTipText">
+            <b>Описание:</b>
+            {{item.textTooltip}}
+          </div>
         </div>
       </div>
       <!-- textarea -->
-      <BaseTextarea :class="[$style.textarea, {[$style.opacity]: !item.checked}]" :disabled="!item.checked" v-model="item.comments"  title-label="Комментарий"/>
+      <BaseTextarea
+          :class="[$style.textarea, {[$style.opacity]: !item.checked}]"
+          :disabled="!item.checked"
+          v-model="item.comments"
+          title-label="Комментарий"
+      />
     </div>
   </div>
 </template>
@@ -20,7 +32,6 @@
 import BaseTextarea from '@/components/_components/BaseTextarea.vue'
 import BaseCheckBox from '@/components/_components/BaseCheckBox.vue'
 import { storeDataForm } from '@/stores/storeDataForm';
-
 const store = storeDataForm();
 </script>
 

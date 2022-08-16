@@ -9,7 +9,6 @@
           :placeholder="props.placeholder"
           @input="updateInput"
       ></textarea>
-
     </label>
   </div>
 </template>

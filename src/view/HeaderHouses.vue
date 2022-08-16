@@ -22,6 +22,7 @@
 <script lang="ts" setup>
 import PreHeader from '@/view/PreHeader.vue';
 </script>
+
 <style module>
 .wrapper {
   margin-left: 10%;

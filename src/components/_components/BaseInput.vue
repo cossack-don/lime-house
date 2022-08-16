@@ -13,7 +13,6 @@
         :placeholder="props.placeholder"
         :disabled="props.disabled"
         @input="emit('update:modelValue', $event.target.value)"
-
       >
     </label>
   </div>

@@ -31,7 +31,6 @@
           v-model="store.$state.dataForm.maximumApartmentAmount"
           :class="$style.mb10"
           placeholder=""
-          v-maska="'## ### ###'"
           title-label="Максимальная сумма жилья"
       />
       <BaseInput
@@ -45,7 +44,6 @@
           v-model="store.$state.dataForm.downPayment"
           :class="$style.mb10"
           placeholder=""
-          v-maska="'## ### ###'"
           title-label="Первоначальный взнос"
       />
       <BaseInput
