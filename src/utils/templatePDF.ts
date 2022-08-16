@@ -10,7 +10,7 @@ export const generationPDF = () => {
  pdf.setFontSize(20);
  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
  // @ts-ignore
- pdf.text("Список приоритетных условий, при покупке недвижимости", 105, 15, null, null, 'center');
+ pdf.text("Общая информация о недвижимости", 105, 15, null, null, 'center');
 
  // TODO Название застройщика
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
@@ -68,7 +68,12 @@ export const generationPDF = () => {
  pdf.setFont("PT_Sans-Web-Regular", 'normal');
  pdf.text(`${stateDataForm.dataForm.mortgageTerm} лет`, 133, 70);
 
-
+ pdf.setFont("PT_Sans-Web-Italic", 'normal');
+ pdf.setFontSize(20);
+ // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+ // @ts-ignore
+ pdf.text("Список приоритетов для покупки недвижимости", 105, 115, null, null, 'center');
+ pdf.setFontSize(14);
  // TODO Список критериев - stateDataForm.dataComments
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
  pdf.text("Колличество м² в квартире:", 10, 130);
@@ -117,7 +122,7 @@ export const generationPDF = () => {
      pdf.splitTextToSize('ЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовок', 180),
      10, 286);
 
-
+ // TODO new page
  pdf.addPage("a4");
  // Список критериев 5
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
@@ -126,6 +131,55 @@ export const generationPDF = () => {
  pdf.text(
      pdf.splitTextToSize('ЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовок', 180),
      10, 26);
+
+ // Список критериев 6
+ pdf.setFont("PT_Sans-Web-Bold", 'normal');
+ pdf.text("Заголовок5:", 10, 50);
+ pdf.setFont("PT_Sans-Web-Regular", 'normal');
+ pdf.text(
+     pdf.splitTextToSize('ЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовок', 180),
+     10, 56);
+
+ // Список критериев 7
+ pdf.setFont("PT_Sans-Web-Bold", 'normal');
+ pdf.text("Заголовок5:", 10, 80);
+ pdf.setFont("PT_Sans-Web-Regular", 'normal');
+ pdf.text(
+     pdf.splitTextToSize('ЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовок', 180),
+     10, 86);
+
+ // Список критериев 7
+ pdf.setFont("PT_Sans-Web-Bold", 'normal');
+ pdf.text("Заголовок5:", 10, 110);
+ pdf.setFont("PT_Sans-Web-Regular", 'normal');
+ pdf.text(
+     pdf.splitTextToSize('ЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовок', 180),
+     10, 116);
+
+ // Список критериев 7
+ pdf.setFont("PT_Sans-Web-Bold", 'normal');
+ pdf.text("Заголовок5:", 10, 140);
+ pdf.setFont("PT_Sans-Web-Regular", 'normal');
+ pdf.text(
+     pdf.splitTextToSize('ЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовок', 180),
+     10, 146);
+
+ // Список критериев 7
+ pdf.setFont("PT_Sans-Web-Bold", 'normal');
+ pdf.text("Заголовок5:", 10, 170);
+ pdf.setFont("PT_Sans-Web-Regular", 'normal');
+ pdf.text(
+     pdf.splitTextToSize('ЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовок', 180),
+     10, 176);
+
+ // Список критериев 7
+ pdf.setFont("PT_Sans-Web-Bold", 'normal');
+ pdf.text("Заголовок5:", 10, 200);
+ pdf.setFont("PT_Sans-Web-Regular", 'normal');
+ pdf.text(
+     pdf.splitTextToSize('ЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовокЗаголовок', 180),
+     10, 206);
+ // TODO SAVE DOC
  // pdf.text(storeDataForm().$state.dataForm.phone, 20, 60);
  pdf.save("a4.pdf");
 
