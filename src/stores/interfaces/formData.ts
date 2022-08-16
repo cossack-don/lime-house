@@ -3,7 +3,7 @@ export interface IDataForm {
     urlDeveloperName: string;
     phone: string;
     commentsDeveloper: string;
-    maximumApartmentAmount: string;
+    maximumApartmentAmount: string | number;
     mortgageTerm:string;
     interestRate: string;
     downPayment: string;

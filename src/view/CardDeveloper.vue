@@ -64,10 +64,20 @@ import BaseInput from '@/components/_components/BaseInput.vue';
 import BaseTextarea from '@/components/_components/BaseTextarea.vue';
 import { storeDataForm } from '@/stores/storeDataForm';
 import useVuelidate from '@vuelidate/core'
-import { computed} from "vue";
-import { required, email, minLength } from '@vuelidate/validators'
+import {computed, ref, watch} from "vue";
+import { mapActions } from 'pinia'
+import { required, minLength } from '@vuelidate/validators'
 const store = storeDataForm();
 
+
+// const test = (v) => {
+//   return v.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+// }
+// ...mapActions(storeDataForm, ['increment'])
+// const w = computed(() => {
+//   return store.setNumbers()
+//   // return test(store.$state.dataForm.maximumApartmentAmount);
+// })
 // type-based
 // const emit = defineEmits<{
 //   (e: 'change', id: number): void
@@ -84,9 +94,23 @@ const rules = computed(() => ({
 
   },
 }))
-
+const test = ref('')
+const TEST = computed(() => {
+  return store.setNumbers()
+})
 
 const v$ = useVuelidate(rules, store.$state.dataForm)
+
+
+watch(store.$state.dataForm, (currentValue, oldValue) => {
+
+
+  store.setNumbers()
+  // store.$patch((state) => {
+  //   state.dataForm.maximumApartmentAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  // })
+
+})
 </script>
 
 <style module>
