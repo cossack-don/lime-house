@@ -7,6 +7,6 @@ export const dataForm:IDataForm = {
     commentsDeveloper:'test', // комментарий о застройщике
     maximumApartmentAmount:'6000000', // максимальная сумма квартиры
     interestRate:'13', // процентная ставка
-    mortgageTerm: '', // срок ипотеки
+    mortgageTerm: '22', // срок ипотеки
     downPayment:'1500000', // первоначальный взнос
 }

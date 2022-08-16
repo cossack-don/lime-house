@@ -36,7 +36,11 @@ export const generationPDF = () => {
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
  pdf.text("Процентная ставка -", 100, 50);
  pdf.setFont("PT_Sans-Web-Regular", 'normal');
- pdf.text(`${stateDataForm.dataForm.interestRate}`, 146, 50);
+ if(stateDataForm.dataForm.interestRate.length === 3) {
+  pdf.text(`${stateDataForm.dataForm.interestRate.replace(/[\s.,%]/g, '')} %`, 146, 50);
+ } else {
+  pdf.text(`${stateDataForm.dataForm.interestRate} %`, 146, 50);
+ }
 
  // TODO телефон
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
@@ -48,7 +52,7 @@ export const generationPDF = () => {
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
  pdf.text("Первоначальный взнос -", 100, 60);
  pdf.setFont("PT_Sans-Web-Regular", 'normal');
- pdf.text(`${stateDataForm.dataForm.downPayment}`, 155, 60);
+ pdf.text(`${stateDataForm.dataForm.downPayment} руб.`, 155, 60);
 
  // TODO Комментарий о застройщике
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
@@ -62,7 +66,7 @@ export const generationPDF = () => {
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
  pdf.text("Срок ипотеки -", 100, 70);
  pdf.setFont("PT_Sans-Web-Regular", 'normal');
- pdf.text(`${stateDataForm.dataForm.mortgageTerm}`, 133, 70);
+ pdf.text(`${stateDataForm.dataForm.mortgageTerm} лет`, 133, 70);
 
 
  // TODO Список критериев - stateDataForm.dataComments

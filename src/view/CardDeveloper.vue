@@ -1,7 +1,7 @@
 <template>
 <div :class="$style.wrapper">
     <div :class="$style.leftPart" >
-
+<pre>{{store.$state.dataForm}}</pre>
       <BaseInput
           v-model="store.$state.dataForm.developerName"
           :class="$style.mb10"
@@ -52,12 +52,11 @@
           v-model="store.$state.dataForm.mortgageTerm"
           placeholder=""
           title-label="Срок ипотеки - в годах"
-          v-maska="'## лет'"
+          v-maska="'##'"
       />
 <!--      <pre>{{v$.mortgageTerm}}</pre>-->
-      <div v-if="!v$.mortgageTerm.$invalid">Name field has an error.</div>
+<!--      <div v-if="!v$.mortgageTerm.$invalid">Name field has an error.</div>-->
 
-      <pre>{{ v$.mortgageTerm}}</pre>
     </div>
   </div>
 </template>
