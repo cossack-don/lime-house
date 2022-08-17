@@ -13,7 +13,7 @@ export const dataComments:IDataComments[] = [
         comments:'',
         checked:false,
         textTooltip:'Общая площадь недвижимости(жилая и не жилая)',
-        label: 'Сколько м² в недвижимости',
+        label: 'м² в недвижимости',
     },
     {
         id:3,

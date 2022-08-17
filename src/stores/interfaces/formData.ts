@@ -6,5 +6,5 @@ export interface IDataForm {
     maximumApartmentAmount: string | number;
     mortgageTerm:string;
     interestRate: string;
-    downPayment: string;
+    downPayment: string | number;
 }

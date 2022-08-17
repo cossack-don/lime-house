@@ -1,7 +1,7 @@
 <template>
 <div :class="$style.wrapper">
     <div :class="$style.leftPart" >
-<pre>{{store.$state.dataForm}}</pre>
+<!--<pre>{{store.$state.dataForm}}</pre>-->
       <BaseInput
           v-model="store.$state.dataForm.developerName"
           :class="$style.mb10"
@@ -27,30 +27,56 @@
       />
     </div>
     <div :class="$style.rightPart">
-      <BaseInput
+      <BaseInputNumber
           v-model="store.$state.dataForm.maximumApartmentAmount"
           :class="$style.mb10"
-          placeholder=""
           title-label="Максимальная сумма жилья"
       />
-      <BaseInput
+      <BaseInputNumber
           v-model="store.$state.dataForm.interestRate"
           :class="$style.mb10"
-          placeholder=""
           title-label="Cтавка - %"
-          v-maska="'##,##'"
+          maxlength="6"
+          :options="{
+          precision: 1,
+          prefix: '',
+          suffix: ' %',
+          decimal: ',',
+          thousand: '',
+          acceptNegative: false,
+          isInteger: false}"
       />
-      <BaseInput
+<!--      <BaseInput-->
+<!--          v-model="store.$state.dataForm.interestRate"-->
+<!--          :class="$style.mb10"-->
+<!--          placeholder=""-->
+<!--          title-label="Cтавка - %"-->
+<!--          v-maska="'##,##'"-->
+<!--      />-->
+      <BaseInputNumber
           v-model="store.$state.dataForm.downPayment"
           :class="$style.mb10"
-          placeholder=""
           title-label="Первоначальный взнос"
       />
-      <BaseInput
+<!--      <BaseInput-->
+<!--          v-model="store.$state.dataForm.mortgageTerm"-->
+<!--          placeholder=""-->
+<!--          title-label="Срок ипотеки - в годах"-->
+<!--          v-maska="'##'"-->
+<!--      />-->
+      <BaseInputNumber
           v-model="store.$state.dataForm.mortgageTerm"
-          placeholder=""
-          title-label="Срок ипотеки - в годах"
-          v-maska="'##'"
+          :class="$style.mb10"
+          title-label="Срок ипотеки"
+          maxlength="6"
+          :options="{
+          precision: 0,
+          prefix: '',
+          suffix: ' лет',
+          decimal: '',
+          thousand: '',
+          acceptNegative: false,
+          isInteger: false}"
       />
 <!--      <pre>{{v$.mortgageTerm}}</pre>-->
 <!--      <div v-if="!v$.mortgageTerm.$invalid">Name field has an error.</div>-->
@@ -60,6 +86,7 @@
 </template>
 
 <script setup lang="ts">
+import BaseInputNumber from '@/components/_components/BaseInputNumber.vue';
 import BaseInput from '@/components/_components/BaseInput.vue';
 import BaseTextarea from '@/components/_components/BaseTextarea.vue';
 import { storeDataForm } from '@/stores/storeDataForm';
@@ -68,6 +95,8 @@ import {computed, ref, watch} from "vue";
 import { mapActions } from 'pinia'
 import { required, minLength } from '@vuelidate/validators'
 const store = storeDataForm();
+
+
 
 
 // const test = (v) => {
@@ -94,23 +123,13 @@ const rules = computed(() => ({
 
   },
 }))
-const test = ref('')
-const TEST = computed(() => {
-  return store.setNumbers()
-})
+// const test = ref('')
+// const TEST = computed(() => {
+//   return store.setNumbers()
+// })
 
 const v$ = useVuelidate(rules, store.$state.dataForm)
 
-
-watch(store.$state.dataForm, (currentValue, oldValue) => {
-
-
-  store.setNumbers()
-  // store.$patch((state) => {
-  //   state.dataForm.maximumApartmentAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-  // })
-
-})
 </script>
 
 <style module>
@@ -119,7 +138,18 @@ watch(store.$state.dataForm, (currentValue, oldValue) => {
   border-radius: 8px;
   display: flex;
 }
-
+.input {
+  outline: none;
+  margin-top: 4px;
+  border: 2px solid #08a652;
+  border-radius: 8px;
+  padding: 5px;
+  background: #ffffff;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #494e53;
+}
 .mb10 {
   margin-bottom: 10px;
 }

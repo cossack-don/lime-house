@@ -5,8 +5,8 @@ export const dataForm:IDataForm = {
     urlDeveloperName:'www.test.ru', // ссылка на застройщика или их предлжения - url
     phone:'+7-933-111-22-22', // телефон контактный
     commentsDeveloper:'test', // комментарий о застройщике
-    maximumApartmentAmount: 2222, // максимальная сумма квартиры
+    maximumApartmentAmount: 0, // максимальная сумма квартиры
     interestRate:'13', // процентная ставка
     mortgageTerm: '22', // срок ипотеки
-    downPayment:'1500000', // первоначальный взнос
+    downPayment: 0, // первоначальный взнос
 }

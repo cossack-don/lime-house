@@ -23,7 +23,7 @@ export const generationPDF = () => {
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
  pdf.text("Максимальная сумма жилья -", 100, 40);
  pdf.setFont("PT_Sans-Web-Regular", 'normal');
- pdf.text(`${stateDataForm.dataForm.maximumApartmentAmount} руб.`, 166, 40);
+ pdf.text(`${stateDataForm.dataForm.maximumApartmentAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} руб.`, 166, 40);
 
  // TODO сайт застройщика
  pdf.setTextColor("blue");
@@ -52,7 +52,7 @@ export const generationPDF = () => {
  pdf.setFont("PT_Sans-Web-Bold", 'normal');
  pdf.text("Первоначальный взнос -", 100, 60);
  pdf.setFont("PT_Sans-Web-Regular", 'normal');
- pdf.text(`${stateDataForm.dataForm.downPayment} руб.`, 155, 60);
+ pdf.text(`${stateDataForm.dataForm.downPayment.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} руб.`, 155, 60);
 
  // TODO Комментарий о застройщике
  pdf.setFont("PT_Sans-Web-Bold", 'normal');

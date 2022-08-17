@@ -16,15 +16,17 @@ export const storeDataForm = defineStore("dataForm", {
 
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
-            this.dataForm.maximumApartmentAmount = new Intl.NumberFormat('fr-FR').format(this.dataForm.maximumApartmentAmount)
+
+            this.dataForm.maximumApartmentAmount = this.dataForm.maximumApartmentAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+            console.log(this.dataForm.maximumApartmentAmount, typeof this.dataForm.maximumApartmentAmount)
             // console.log(disp)
         // =  this.dataForm.maximumApartmentAmount.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1 ");
-            const a = this.dataForm.maximumApartmentAmount.split('')
-            console.log()
-            if(a.length >= 4) {
-                a.push(' ')
-            }
-            console.log(a)
+        //     const a = this.dataForm.maximumApartmentAmount.split('')
+        //     console.log()
+        //     if(a.length >= 4) {
+        //         a.push(' ')
+        //     }
+        //     console.log(a)
         }
     },
     getters: {
