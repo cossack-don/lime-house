@@ -28,6 +28,7 @@
     </div>
     <div :class="$style.rightPart">
       <BaseInputNumber
+          maxlength="15"
           v-model="store.$state.dataForm.maximumApartmentAmount"
           :class="$style.mb10"
           title-label="Максимальная сумма жилья"
@@ -57,6 +58,7 @@
           v-model="store.$state.dataForm.downPayment"
           :class="$style.mb10"
           title-label="Первоначальный взнос"
+          maxlength="15"
       />
 <!--      <BaseInput-->
 <!--          v-model="store.$state.dataForm.mortgageTerm"-->

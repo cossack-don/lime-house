@@ -12,7 +12,15 @@ import '@/style/body.css';
 
 const app = createApp(App);
 
-app.use(VueNumberFormat)
+app.use(VueNumberFormat, {
+    precision: 0,
+    prefix: '',
+    suffix: ' руб.',
+    decimal: '',
+    thousand: ' ',
+    acceptNegative: false,
+    isInteger: false
+})
 app.use(Maska)
 app.use(createPinia())
 app.mount('#app')

@@ -12,22 +12,14 @@
 
 <script setup lang="ts">
 import { defineProps } from 'vue';
-// TODO Ошибка при деструкторизации и когда задаем default значения. Нужно исправлять
 
-const props = defineProps({
-  disabled: {
-    type: Boolean,
-    default: false,
-  },
-  title: {
-    type: String,
-    default: 'Title',
-  },
-  type: {
-    type: String,
-    default: 'button',
-  },
-});
+interface IBaseButton {
+  disabled?: boolean;
+  title?: string;
+  type?: string;
+}
+
+const props = defineProps<IBaseButton>();
 </script>
 
 <style module>

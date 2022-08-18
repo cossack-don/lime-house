@@ -16,9 +16,8 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script  setup lang="ts">
 import { defineProps, defineEmits } from 'vue';
-
 const emit = defineEmits(['update:checked']);
 
 const change = (e:Event) => {
@@ -26,16 +25,12 @@ const change = (e:Event) => {
   emit('update:checked', checked);
 };
 
-const props = defineProps({
-  checked: {
-    type: Boolean,
-    default: false,
-  },
-  labelText: {
-    type: String,
-    default: 'Текст',
-  },
-});
+interface IBaseCheckbox {
+  checked?: boolean;
+  labelText?: string;
+}
+
+const props = defineProps<IBaseCheckbox>();
 </script>
 
 <style module>

@@ -21,37 +21,6 @@
 <script lang="ts" setup>
 import { defineProps, defineEmits,ref } from 'vue';
 
-const props = defineProps({
-  placeholder: {
-    type: String,
-    default: '',
-  },
-  titleLabel: {
-    type: String,
-    default: 'Title',
-  },
-  disabled: {
-    type: Boolean,
-    default: false,
-  },
-  maxlength: {
-    type: Number,
-    default: 15
-  },
-  options:{
-    type: Object,
-    default: {
-      precision: 0,
-      prefix: '',
-      suffix: ' руб.',
-      decimal: '',
-      thousand: ' ',
-      acceptNegative: false,
-      isInteger: false
-    } as IOptions
-  }
-});
-
 interface IOptions {
   precision: number,
   prefix: string,
@@ -61,6 +30,18 @@ interface IOptions {
   acceptNegative: boolean,
   isInteger: boolean
 }
+
+interface IBaseInputNumber {
+  modelValue?: string | number;
+  type?: string;
+  placeholder?: string;
+  titleLabel?: string;
+  disabled?: boolean;
+  maxlength: string;
+  options: IOptions
+}
+
+const props = defineProps<IBaseInputNumber>();
 
 const valueInputNumber = ref('')
 const emit = defineEmits(['update:modelValue']);

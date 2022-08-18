@@ -16,24 +16,13 @@
 <script setup lang="ts">
 import { defineEmits, defineProps } from 'vue';
 
-const props = defineProps({
-  modelValue: {
-    type: [String, Number],
-    default: null,
-  },
-  disabled: {
-    type: Boolean,
-    default: false,
-  },
-  titleLabel: {
-    type: String,
-    default: 'title-label',
-  },
-  placeholder: {
-    type: String,
-    default: '',
-  },
-})
+interface  IBaseTextarea {
+  modelValue?: string | number;
+  disabled?: boolean;
+  titleLabel?: string;
+  placeholder?: string;
+}
+const props = defineProps<IBaseTextarea>()
 
 interface ISyntheticEvent<T extends EventTarget> extends Event {
   target: T;

@@ -21,28 +21,15 @@
 <script lang="ts" setup>
 import { defineProps, defineEmits } from 'vue';
 
-const props = defineProps({
-  modelValue: {
-    type: [String, Number],
-    default: '',
-  },
-  type: {
-    type: String,
-    default: 'text',
-  },
-  placeholder: {
-    type: String,
-    default: '',
-  },
-  titleLabel: {
-    type: String,
-    default: 'Title',
-  },
-  disabled: {
-    type: Boolean,
-    default: false,
-  },
-});
+interface IBaseInput {
+  modelValue?: string | number;
+  type?: string;
+  placeholder?: string;
+  titleLabel?: string;
+  disabled?: boolean;
+}
+
+const props = defineProps<IBaseInput>();
 
 const emit = defineEmits(['update:modelValue']);
 
