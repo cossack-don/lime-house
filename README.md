@@ -6,6 +6,9 @@
 - https://medium.com/geekculture/emergency-pinia-course-7a80b8ed0b04 статья
 - const numbers = 22222222  numbers.toLocaleString('ru-RU') result - '22 222 222'
 
+## Можно добавить таблицу с данными на отдельную страницу
+https://hc200ok.github.io/vue3-easy-data-table-doc/features/alternating.html
+
 ## Добавить компонент - пакет timeline путь от поиска квартиры до окончания
 например типо такого - https://www.npmjs.com/package/vue-next-timeline
 
