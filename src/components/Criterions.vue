@@ -10,11 +10,12 @@
         <BaseCheckBox v-model:checked="item.checked" :labelText="item.label"/>
         <!-- tooltip -->
         <div :class="$style.toolTip">
-          <img src="@/assets/icon-quastion.svg" alt="">
-          <div :class="$style.toolTipText">
-            <b>Описание:</b>
-            {{item.textTooltip}}
-          </div>
+          <img
+              src="@/assets/icon-quastion.svg"
+              alt=""
+              @mouseover="store.setPushMessage({toggle:true, description:item.textTooltip, title:item.label})"
+              @mouseleave="store.setPushMessage({toggle:false, description:item.textTooltip, title:item.label})"
+          >
         </div>
       </div>
       <!-- textarea -->

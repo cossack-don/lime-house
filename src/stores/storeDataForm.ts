@@ -1,6 +1,11 @@
 import { defineStore} from 'pinia'
+
+import { IPushMessage } from '@/stores/interfaces/pushMessage'
+
 import { dataComments } from '@/stores/dataComments'
 import { dataForm } from "@/stores/dataForm";
+import { pushMessage } from "@/stores/pushMessage";
+
 
 export const storeDataForm = defineStore("dataForm", {
     state: () => {
@@ -8,25 +13,18 @@ export const storeDataForm = defineStore("dataForm", {
                 // Block-first-form
                 dataComments,
                 // Block-second-form
-                dataForm
+                dataForm,
+                pushMessage
         }
     },
     actions:{
         setNumbers() {
-
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
-
             this.dataForm.maximumApartmentAmount = this.dataForm.maximumApartmentAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-            console.log(this.dataForm.maximumApartmentAmount, typeof this.dataForm.maximumApartmentAmount)
-            // console.log(disp)
-        // =  this.dataForm.maximumApartmentAmount.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1 ");
-        //     const a = this.dataForm.maximumApartmentAmount.split('')
-        //     console.log()
-        //     if(a.length >= 4) {
-        //         a.push(' ')
-        //     }
-        //     console.log(a)
+        },
+        setPushMessage(payload: IPushMessage) {
+            this.pushMessage.toggle = payload.toggle
+            this.pushMessage.description = payload.description
+            this.pushMessage.title = payload.title
         }
     },
     getters: {
