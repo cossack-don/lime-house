@@ -5,14 +5,14 @@ export const dataComments:IDataComments[] = [
         id:1,
         comments:'',
         checked:false,
-        textTooltip:'Новостройка/Вторичка/Дом',
+        textTooltip:'Новостройка / Вторичка / Дом',
         label: 'Вид недвижимости',
     },
     {
         id:2,
         comments:'',
         checked:false,
-        textTooltip:'Общая площадь недвижимости(жилая и не жилая)',
+        textTooltip:'Общая площадь недвижимости (жилая и не жилая)',
         label: 'м² в недвижимости',
     },
     {
