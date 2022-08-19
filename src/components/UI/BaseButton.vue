@@ -13,13 +13,21 @@
 <script setup lang="ts">
 import { defineProps } from 'vue';
 
-interface IBaseButton {
-  disabled?: boolean;
-  title?: string;
-  type?: string;
-}
-
-const props = defineProps<IBaseButton>();
+// interface IBaseButton {
+//   disabled: boolean;
+//   title: string;
+//   type: string;
+// }
+const props = defineProps({
+  disabled: { type: Boolean },
+  title: {
+    type: String
+  },
+  type: {
+    type: String
+  }
+})
+// const props = defineProps<IBaseButton>();
 </script>
 
 <style module>

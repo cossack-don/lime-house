@@ -25,12 +25,17 @@ const change = (e:Event) => {
   emit('update:checked', checked);
 };
 
-interface IBaseCheckbox {
-  checked?: boolean;
-  labelText?: string;
-}
-
-const props = defineProps<IBaseCheckbox>();
+// interface IBaseCheckbox {
+//   checked: boolean;
+//   labelText: string;
+// }
+const props = defineProps({
+  checked: { type: Boolean },
+  labelText: {
+    type: String
+  },
+})
+// const props = defineProps<IBaseCheckbox>();
 </script>
 
 <style module>

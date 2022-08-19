@@ -4,10 +4,13 @@
       <span :class="$style.text">{{ props.titleLabel }}</span>
       <textarea
           :disabled="props.disabled"
-          :class="$style.textarea"
+          :class="[$style.textarea, {[$style.error]: props.error}]"
+          :error="props.error"
           :value="props.modelValue"
+          :maxlength="props.maxlength"
           :placeholder="props.placeholder"
           @input="updateInput"
+          :rows="props.rows"
       ></textarea>
     </label>
   </div>
@@ -16,14 +19,37 @@
 <script setup lang="ts">
 import { defineEmits, defineProps } from 'vue';
 
-interface  IBaseTextarea {
-  modelValue?: string | number;
-  disabled?: boolean;
-  titleLabel?: string;
-  placeholder?: string;
-}
-const props = defineProps<IBaseTextarea>()
-
+// interface  IBaseTextarea {
+//   modelValue: string | number;
+//   disabled: boolean;
+//   titleLabel: string;
+//   placeholder: string;
+//   maxlength: string;
+//   rows: string;
+//   error: boolean;
+// }
+// const props = defineProps<IBaseTextarea>()
+const props = defineProps({
+  modelValue: { type: String },
+  disabled: {
+    type: Boolean
+  },
+  titleLabel: {
+    type: String
+  },
+  placeholder: {
+    type: String
+  },
+  maxlength: {
+    type: String
+  },
+  rows: {
+    type: String
+  },
+  error: {
+    type: Boolean
+  },
+})
 interface ISyntheticEvent<T extends EventTarget> extends Event {
   target: T;
 }
@@ -48,6 +74,7 @@ const updateInput = (e:ISyntheticEvent<HTMLInputElement>) => {
   font-weight: 400;
   line-height: 24px;
   color: #494e53;
+  margin-top: 4px;
 }
 
 .textarea:hover {
@@ -59,7 +86,7 @@ const updateInput = (e:ISyntheticEvent<HTMLInputElement>) => {
 }
 
 .textarea::placeholder {
-  color: #504f4f;
+  color: #cfcccc;
 }
 
 .textarea:disabled {
@@ -76,5 +103,13 @@ const updateInput = (e:ISyntheticEvent<HTMLInputElement>) => {
 
 .text {
   margin-bottom: 5px;
+}
+
+.error {
+  border: solid #ff6a59 2px;
+}
+
+.input.error:focus {
+  border: 2px solid #ff6a59;
 }
 </style>

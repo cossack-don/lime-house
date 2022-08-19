@@ -14,7 +14,10 @@ export const storeDataForm = defineStore("dataForm", {
                 dataComments,
                 // Block-second-form
                 dataForm,
-                pushMessage
+                pushMessage,
+                isError: false as boolean,
+                isErrorPushMessage: false as boolean,
+                isSuccessPushMessage: false as boolean,
         }
     },
     actions:{
@@ -25,6 +28,21 @@ export const storeDataForm = defineStore("dataForm", {
             this.pushMessage.toggle = payload.toggle
             this.pushMessage.description = payload.description
             this.pushMessage.title = payload.title
+        },
+        setError(value: boolean) {
+            this.isError = value
+        },
+        setErrorPushMessage() {
+            setTimeout(() => {
+                this.isErrorPushMessage = false
+            }, 2000)
+            this.isErrorPushMessage = true
+        },
+        setSuccessPushMessage() {
+            setTimeout(() => {
+                this.isSuccessPushMessage = false
+            }, 2000)
+            this.isSuccessPushMessage = true
         }
     },
     getters: {

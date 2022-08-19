@@ -4,7 +4,7 @@
 
     <form
         id="form"
-          :class="$style.wrapper"
+        :class="$style.wrapper"
         @submit.prevent="downloadPDF"
     >
       <Criterions/>
@@ -24,24 +24,36 @@
 import { storeDataForm } from '@/stores/storeDataForm';
 import { generationPDF } from '@/utils/templatePDF';
 // components
-import BaseButton from '@/components/_components/BaseButton.vue'
 import CardDeveloper from '@/view/CardDeveloper.vue';
-import Criterions from '@/components/Criterions.vue';
+import Criterions from '@/view/Criterions.vue';
 
 const store = storeDataForm();
 
 const downloadPDF =  () => {
+  // ТУТ Список обязательных полей. Если они пустые, мы не отправляем форму
+  // не генерим ПДФ - а подсвечиваем поля с обязательными
+  if(store.$state.dataForm.developerName === ''
+      || store.$state.dataForm.mortgageTerm === ''
+      || store.$state.dataForm.downPayment === ''
+      || store.$state.dataForm.interestRate === ''
+      || store.$state.dataForm.maximumApartmentAmount === ''
+  ) {
 
-  generationPDF();
+    store.setError(true)
+    store.setErrorPushMessage()
+  } else {
+    store.setError(false)
+    store.setSuccessPushMessage()
+    generationPDF();
+    // без релоада не очищает пдф поля
+    // location.reload();
 
-  location.reload();
-
-//  TODO Нужно отправлять + на бекенд в БД - если вдруг криво на пдф ляжет, чтобы вытащить с БД
-
-  for(let k in store.$state.dataForm) {
-    store.$state.dataForm[k] = ''
+    for(let k in store.$state.dataForm) {
+      store.$state.dataForm[k] = ''
+    }
+    //  TODO Нужно отправлять + на бекенд в БД - если вдруг криво на пдф ляжет, чтобы вытащить с БД
+    console.log('SUBMIT')
   }
-
 }
 </script>
 

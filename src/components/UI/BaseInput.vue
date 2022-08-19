@@ -5,11 +5,16 @@
     <label
       :class="$style.label"
     >
-      {{ props.titleLabel }}
+      <span :class="$style.header">
+        <span>{{ props.titleLabel }}</span>
+        <span v-if="props.requiredStar" :class="$style.star">*</span>
+      </span>
       <input
-        :class="$style.input"
+        :class="[$style.input, {[$style.error]: props.error}]"
+        :error="props.error"
         :type="props.type"
         :value="props.modelValue"
+        :maxlength="props.maxlength"
         :placeholder="props.placeholder"
         :disabled="props.disabled"
         @input="emit('update:modelValue', $event.target.value)"
@@ -22,15 +27,43 @@
 import { defineProps, defineEmits } from 'vue';
 
 interface IBaseInput {
-  modelValue?: string | number;
-  type?: string;
-  placeholder?: string;
-  titleLabel?: string;
-  disabled?: boolean;
+  modelValue: string | number;
+  type: string;
+  placeholder: string;
+  titleLabel: string;
+  disabled: boolean;
+  maxlength: string;
+  error: boolean;
 }
 
-const props = defineProps<IBaseInput>();
-
+// Падают ошибки в консоль если задаю по ТС типы !! Нужно разбираться
+// runtime-core.esm-bundler.js?5c40:38 [Vue warn]: Missing required prop: "disabled"
+// const props = defineProps<IBaseInput>();
+const props = defineProps({
+  modelValue: { type: String },
+  type: {
+    type: String
+  },
+  placeholder:{
+    type: String
+  },
+  titleLabel:{
+    type: String
+  },
+  disabled: {
+    type: Boolean
+  },
+  maxlength: {
+    type: String
+  },
+  error: {
+    type: Boolean
+  },
+  requiredStar:{
+    type: Boolean,
+    default:false
+  }
+})
 const emit = defineEmits(['update:modelValue']);
 
 // first variant @input="emit('update:modelValue', $event.target.value)"
@@ -69,12 +102,22 @@ const emit = defineEmits(['update:modelValue']);
   color: #494e53;
 }
 
+.input:before {
+  content: '1';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  background: red;
+}
+
 .input:focus {
   border: 2px solid #494e53;
 }
 
 .input::placeholder {
-  color: #504f4f;
+  color: #cfcccc;
 }
 
 .label {
@@ -87,7 +130,26 @@ const emit = defineEmits(['update:modelValue']);
   color: #08a652;
 }
 
-.input[type="text"]:disabled {
-  background: red;
+.input:disabled {
+  background: #eaeaea;
+  border: 2px solid #242629;
+}
+
+.error {
+  border: solid #ff6a59 2px;
+}
+
+.input.error:focus {
+  border: 2px solid #ff6a59;
+}
+
+.header {
+  display: flex;
+}
+
+.star {
+  margin-left: 2px;
+  color: #ff6a59;
+  font-size: 18px;
 }
 </style>

@@ -36,14 +36,15 @@
           :disabled="!item.checked"
           v-model="item.comments"
           title-label="Комментарий"
+          placeholder="Описание"
       />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import BaseTextarea from '@/components/_components/BaseTextarea.vue'
-import BaseCheckBox from '@/components/_components/BaseCheckBox.vue'
+import BaseTextarea from '@/components/UI/BaseTextarea.vue'
+import BaseCheckBox from '@/components/UI/BaseCheckBox.vue'
 import { storeDataForm } from '@/stores/storeDataForm';
 const store = storeDataForm();
 </script>

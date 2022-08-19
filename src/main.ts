@@ -11,6 +11,17 @@ import '@/style/vars.css';
 import '@/style/body.css';
 
 const app = createApp(App);
+// UI KIT BASE
+import BaseButton from '@/components/UI/BaseButton.vue'
+import BaseInput from '@/components/UI/BaseInput.vue'
+import BaseCheckBox from '@/components/UI/BaseCheckBox.vue'
+import BaseTextarea from '@/components/UI/BaseTextarea.vue'
+import BaseInputNumber from '@/components/UI/BaseInputNumber.vue'
+app.component("BaseButton", BaseButton);
+app.component("BaseInput", BaseInput);
+app.component("BaseCheckBox", BaseCheckBox);
+app.component("BaseTextarea", BaseTextarea);
+app.component("BaseInputNumber", BaseInputNumber);
 
 app.use(VueNumberFormat, {
     precision: 0,
