@@ -148,10 +148,10 @@
 <script setup lang="ts">
 
 import { storeDataForm } from '@/stores/storeDataForm';
-import useVuelidate from '@vuelidate/core'
+
 import {computed, ref, watch} from "vue";
 import { mapActions } from 'pinia'
-import { required, minLength,  } from '@vuelidate/validators'
+
 const store = storeDataForm();
 
 const isError = ref(false);
@@ -167,40 +167,6 @@ watch(store.$state.dataForm, (currentValue, oldValue) => {
   }
 // Если 4 нужных поля не заполнены, кнопка
 });
-
-
-
-// const test = (v) => {
-//   return v.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-// }
-// ...mapActions(storeDataForm, ['increment'])
-// const w = computed(() => {
-//   return store.setNumbers()
-//   // return test(store.$state.dataForm.maximumApartmentAmount);
-// })
-// type-based
-// const emit = defineEmits<{
-//   (e: 'change', id: number): void
-//   (e: 'update', value: string): void
-// }>()
-
-const rules = computed(() => ({
-  mortgageTerm: {
-    required,
-    minLength: minLength(2),
-
-      $message:'222',
-
-
-  },
-}))
-// const test = ref('')
-// const TEST = computed(() => {
-//   return store.setNumbers()
-// })
-
-const v$ = useVuelidate(rules, store.$state.dataForm)
-
 </script>
 
 <style module>
