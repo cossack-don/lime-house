@@ -13,7 +13,6 @@
 
          <template v-if="index === 2">
            <img
-               :class="{[$style.imageZindex]: store.$state.pushMessage.toggle}"
                src="@/assets/icon-quastion.svg"
                alt=""
                @mouseover="store.setPushMessage({toggle:true, description:item.textTooltip, title:item.label})"
@@ -125,11 +124,5 @@ const store = storeDataForm();
 
 .textarea {
   margin-top: 10px;
-}
-
-.imageZindex {
-  position: absolute;
-  z-index: 4;
-  opacity: 0;
 }
 </style>

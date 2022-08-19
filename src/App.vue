@@ -42,7 +42,7 @@ const storeState = storeDataForm().$state;
   border: 4px solid #08a652;
   height: 200px;
   color: #08a652;
-  width: 30%;
+  width: 20%;
   padding: 15px;
   border-radius: 8px;
   background: #fff;
