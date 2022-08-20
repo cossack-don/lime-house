@@ -1,11 +1,8 @@
 import { defineStore} from 'pinia'
-
 import { IPushMessage } from '@/stores/interfaces/pushMessage'
-
 import { dataComments } from '@/stores/dataComments'
 import { dataForm } from "@/stores/dataForm";
 import { pushMessage } from "@/stores/pushMessage";
-
 
 export const storeDataForm = defineStore("dataForm", {
     state: () => {
@@ -21,9 +18,6 @@ export const storeDataForm = defineStore("dataForm", {
         }
     },
     actions:{
-        setNumbers() {
-            this.dataForm.maximumApartmentAmount = this.dataForm.maximumApartmentAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-        },
         setPushMessage(payload: IPushMessage) {
             this.pushMessage.toggle = payload.toggle
             this.pushMessage.description = payload.description
@@ -46,8 +40,5 @@ export const storeDataForm = defineStore("dataForm", {
         }
     },
     getters: {
-        doubleCount(state) {
-            return state.dataForm.maximumApartmentAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-        },
     }
 })

@@ -47,20 +47,10 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue";
 import Form from '@/view/Form.vue';
 import HeaderHouses from '@/view/HeaderHouses.vue';
 import Cards from '@/view/Cards.vue';
 import { storeDataForm } from '@/stores/storeDataForm';
-
-// const a = computed( () => {
-//   // eslint-disable-next-line vue/no-async-in-computed-properties
-//   setTimeout(() => {
-//     storeSets.setIsError(false)
-//   })
-//   storeSets.setIsError(true)
-//   return  true
-// })
 
 const store = storeDataForm();
 </script>
@@ -69,6 +59,7 @@ const store = storeDataForm();
 .wrapper {
   position: relative;
 }
+
 .pushMessage {
   position: fixed;
   z-index: 2;
@@ -97,6 +88,7 @@ const store = storeDataForm();
   border-radius: 8px;
   line-height: 1.5;
 }
+
 /*animation push-message*/
 .enterActive {
   transition: all 0.3s ease-out;

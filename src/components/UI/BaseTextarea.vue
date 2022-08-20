@@ -109,7 +109,7 @@ const updateInput = (e:ISyntheticEvent<HTMLInputElement>) => {
   border: solid #ff6a59 2px;
 }
 
-.input.error:focus {
+.textarea.error:focus {
   border: 2px solid #ff6a59;
 }
 </style>

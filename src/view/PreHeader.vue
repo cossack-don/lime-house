@@ -5,10 +5,6 @@
   </div>
 </template>
 
-<script>
-
-</script>
-
 <style module>
 .animation {
   border: none;

@@ -1,5 +1,5 @@
 <template>
-  <div   >
+  <div  style="width: 50%;" >
     <div :class="$style.wrapper">
       <div :class="$style.leftPart" >
         <BaseInput
@@ -12,7 +12,6 @@
             maxlength="30"
         />
         <BaseInput
-
             v-model="store.$state.dataForm.urlDeveloperName"
             :class="$style.mb10"
             maxlength="30"
@@ -42,7 +41,7 @@
         />
         <BaseInputNumber
             maxlength="15"
-            v-model="store.$state.dataForm.space"
+            v-model="store.$state.dataForm.priceOffer"
             :class="$style.mb10"
             title-label="Цена за текущее предложение"
         />
@@ -73,13 +72,6 @@
               acceptNegative: false,
               isInteger: false}"
         />
-        <!--      <BaseInput-->
-        <!--          v-model="store.$state.dataForm.interestRate"-->
-        <!--          :class="$style.mb10"-->
-        <!--          placeholder=""-->
-        <!--          title-label="Cтавка - %"-->
-        <!--          v-maska="'##,##'"-->
-        <!--      />-->
         <BaseInputNumber
             requiredStar
             :error="store.$state.isError"
@@ -88,18 +80,6 @@
             title-label="Первоначальный взнос"
             maxlength="15"
         />
-        <!--      <BaseInput-->
-        <!--          v-model="store.$state.dataForm.mortgageTerm"-->
-        <!--          placeholder=""-->
-        <!--          title-label="Срок ипотеки - в годах"-->
-        <!--          v-maska="'##'"-->
-        <!--      />-->
-        <!--              <pre>{{v$.mortgageTerm}}</pre>-->
-<!--        <div v-if="!v$.mortgageTerm.$invalid">Name field has an error. /*#ff6a59 error border*/</div>-->
-<!--        {{v$.mortgageTerm}}-->
-<!--        :error="!v$.mortgageTerm.$invalid"-->
-<!--        :class="[$style.mb10, {[$style.test]: !v$.mortgageTerm.$invalid}]"-->
-
         <BaseInputNumber
             requiredStar
             :error="store.$state.isError"
@@ -107,7 +87,6 @@
             :class="[$style.mb10]"
             title-label="Срок ипотеки"
             maxlength="6"
-
             :options="{
               precision: 0,
               prefix: '',
@@ -117,7 +96,6 @@
               acceptNegative: false,
               isInteger: false}"
         />
-
         <BaseInputNumber
             v-model="store.$state.dataForm.incomeCustomer"
             :class="$style.mb10"
@@ -144,48 +122,19 @@
 </template>
 
 <script setup lang="ts">
-
 import { storeDataForm } from '@/stores/storeDataForm';
-
-import {computed, ref, watch} from "vue";
-import { mapActions } from 'pinia'
-
+import { computed } from "vue";
+// TODO переписать потом store.state на computed
 const store = storeDataForm();
-
-const isError = ref(false);
-
-
-watch(store.$state.dataForm, (currentValue, oldValue) => {
-  console.log(currentValue);
-
-  if(currentValue.developerName !== '' && currentValue.urlDeveloperName !== '') {
-    isError.value = true
-  } else {
-    isError.value = false
-  }
-// Если 4 нужных поля не заполнены, кнопка
-});
 </script>
 
 <style module>
-
 .wrapper {
   border:2px solid #08a652;
   border-radius: 8px;
   display: flex;
 }
-.input {
-  outline: none;
-  margin-top: 4px;
-  border: 2px solid #08a652;
-  border-radius: 8px;
-  padding: 5px;
-  background: #ffffff;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #494e53;
-}
+
 .mb10 {
   margin-bottom: 10px;
 }

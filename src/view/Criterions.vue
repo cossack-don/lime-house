@@ -21,7 +21,6 @@
          </template>
           <template v-else>
             <img
-
                 src="@/assets/icon-quastion.svg"
                 alt=""
                 @mouseover="store.setPushMessage({toggle:true, description:item.textTooltip, title:item.label})"
@@ -77,47 +76,8 @@ const store = storeDataForm();
   cursor: pointer;
 }
 
-.toolTipText {
-  position: absolute;
-  margin-top: 5px;
-  left: 30px;
-  top: -7px;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility ease 0s, opacity ease 1s;
-  background: #08a652;
-  width: 150px;
-  padding: 5px;
-  border-radius: 8px;
-  z-index: 2;
-  color: #ffffff;
-  box-shadow: 8px 0px 8px 0px rgb(34 60 80 / 11%);
-  font-size: 10px;
-  font-style: italic;
-}
-
-.toolTipText:hover {
-  transition: 0.5s;
-}
-
-.toolTipText:before {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: #08a652;
-  left: -3px;
-  top: 4px;
-  transform: rotate(45deg);
-  z-index: -1;
-}
-
-.toolTip:hover .toolTipText{
-  visibility: visible;
-  opacity: 1;
-}
-
 .wrapper {
+  width: 50%;
   display: flex;
   justify-content: space-between;
   flex-wrap:wrap;

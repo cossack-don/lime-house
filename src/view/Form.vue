@@ -2,13 +2,15 @@
   <div :class="$style.app">
     <h2 :class="$style.title">Подборка критериев:</h2>
 
-    <form
-        id="form"
-        :class="$style.wrapper"
-        @submit.prevent="downloadPDF"
-    >
-      <Criterions/>
-      <CardDeveloper/>
+    <form @submit.prevent="downloadPDF">
+      <div
+          id="form"
+          :class="$style.wrapper"
+      >
+        <Criterions/>
+        <CardDeveloper/>
+
+      </div>
 
       <BaseButton
           :class="$style.buttonSubmit"
@@ -16,6 +18,7 @@
           title="Сформировать PDF"
       />
     </form>
+
 
   </div>
 </template>
@@ -59,10 +62,12 @@ const downloadPDF =  () => {
 
 <style module>
 .app {
-  max-width: 800px;
+  /*max-width: 800px;*/
   margin: 0 auto;
 }
+
 .wrapper {
+  display: flex;
   margin-bottom: 25px;
   padding: 15px;
   border-bottom-right-radius: 8px;
