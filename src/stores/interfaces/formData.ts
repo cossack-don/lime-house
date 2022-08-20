@@ -11,5 +11,5 @@ export interface IDataForm {
     downPayment: string;
     wishMonthlyPayment: string;
     incomeCustomer: string;
-    space: string;
+    priceOffer: string;
 }

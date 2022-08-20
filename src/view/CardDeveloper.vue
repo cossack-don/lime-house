@@ -37,16 +37,14 @@
             v-model="store.$state.dataForm.propertyLocation"
             :class="$style.mb10"
             maxlength="30"
-            placeholder="Геолокация на карте"
-            title-label="Геолокация на карте"
+            placeholder="Ссылка на яндекс карты"
+            title-label="Ссылка на яндекс карты"
         />
-        <BaseInput
+        <BaseInputNumber
+            maxlength="15"
             v-model="store.$state.dataForm.space"
             :class="$style.mb10"
-            maxlength="0"
-            disabled
-            placeholder="Пустое место"
-            title-label="Пустое место"
+            title-label="Цена за текущее предложение"
         />
       </div>
       <div :class="$style.rightPart">

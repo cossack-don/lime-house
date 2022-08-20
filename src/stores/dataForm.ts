@@ -14,5 +14,5 @@ export const dataForm:IDataForm = {
     downPayment: '', // первоначальный взнос
     wishMonthlyPayment: '', // желаемый ежемесячный платеж
     incomeCustomer: '', // доход семьи/попкупателя
-    space: '', // пустое место
+    priceOffer: '', // цена за недвижимость
 }
