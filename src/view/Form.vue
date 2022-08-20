@@ -68,6 +68,7 @@ const downloadPDF =  () => {
 
 .wrapper {
   display: flex;
+  justify-content: space-between;
   margin-bottom: 25px;
   padding: 15px;
   border-bottom-right-radius: 8px;

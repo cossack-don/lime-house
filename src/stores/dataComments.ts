@@ -6,14 +6,14 @@ export const dataComments:IDataComments[] = [
         comments:'',
         checked:false,
         textTooltip:'Вид: Новостройка / Дом / Вторичка. Тип: Студия, Однокомнатная, Двухкомнатная, Апартаменты.',
-        label: 'Вид жилья и Тип квартиры',
+        label: 'Вид и Тип жилья',
     },
     {
         id:2,
         comments:'',
         checked:false,
         textTooltip:'Общая площадь, Жилая площадь, Площадь Кухни, Колличество комнат.',
-        label: 'Кол-во м² в недвижимости',
+        label: 'Общая площадь м²',
     },
     {
         id:3,

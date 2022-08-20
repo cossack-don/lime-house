@@ -77,7 +77,7 @@ const store = storeDataForm();
 }
 
 .wrapper {
-  width: 50%;
+  width: 48%;
   display: flex;
   justify-content: space-between;
   flex-wrap:wrap;

@@ -1,5 +1,5 @@
 <template>
-  <div  style="width: 50%;" >
+  <div  style="width: 48%;" >
     <div :class="$style.wrapper">
       <div :class="$style.leftPart" >
         <BaseInput
@@ -111,12 +111,12 @@
       </div>
     </div>
     <BaseTextarea
-        :class="$style.mt25"
+        :class="$style.mt13"
         v-model="store.$state.dataForm.commentsDeveloper"
         title-label="Комментарии о застройщике"
         placeholder="Комментарии"
         maxlength="200"
-        rows="3"
+        rows="5"
     />
   </div>
 </template>
@@ -139,17 +139,17 @@ const store = storeDataForm();
   margin-bottom: 10px;
 }
 
-.mt25 {
-  margin-top: 25px;
+.mt13 {
+  margin-top: 13px;
 }
 
 .leftPart {
   width: 100%;
-  padding: 15px;
+  padding: 32px;
 }
 
 .rightPart {
   width: 100%;
-  padding: 15px;
+  padding: 32px;
 }
 </style>
