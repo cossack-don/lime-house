@@ -1,0 +1,24 @@
+<single-spa-router>
+  <!--
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/
+  -->
+
+  <!-- Example layouts you might find helpful:
+
+  <nav>
+    <application name="@org/navbar"></application>
+  </nav>
+  <route path="settings">
+    <application name="@org/settings"></application>
+  </route>
+  -->
+
+  <main class="root-wrapper">
+    <route default>
+      <application name="@app/react"></application>
+      <application name="@core/ipoteka"></application>
+    </route>
+  </main>
+  "prepare": "husky install",
+</single-spa-router>
