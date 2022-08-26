@@ -1,5 +1,10 @@
 # structure-microfrontends
 
+## Сетка для root
+
+![image](https://user-images.githubusercontent.com/71700914/186831919-dc6f3e0a-bb29-40d3-b05c-dba840d9bb3d.png)
+
+
 ### Примеры дизайна
 - https://www.behance.net/gallery/70227549/lichnyj-kabinet-klienta-smp-banka-razdel-ipoteki
 - https://www.behance.net/gallery/109718387/Online-mortgage-submission-service-Bank-portal
