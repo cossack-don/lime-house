@@ -1,7 +1,14 @@
 # structure-microfrontends
 
+### Примеры дизайна
+- https://www.behance.net/gallery/70227549/lichnyj-kabinet-klienta-smp-banka-razdel-ipoteki
+- https://www.behance.net/gallery/109718387/Online-mortgage-submission-service-Bank-portal
+- https://cvekla.com/blog/lending-dlya-ipoteki
+- https://yandex.ru/images/touch/search?from=tabbar&text=grid.%20css&lr=213&redircnt=1661486815.1
 
 ### Идеи по функционалу и дизайну 
+- https://barba.js.org/docs/getstarted/lifecycle/ Анимация
+- Анимация https://greensock.com/gsap/
 - дизайн https://www.behance.net/search/projects?tracking_source=typeahead_search_direct&search=ипотека%20mortgage
 - Посмотреть дизайны Ипотеки на бихайнс
 - Калькулятор
