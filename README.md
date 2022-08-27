@@ -17,6 +17,9 @@
 - дизайн https://www.behance.net/search/projects?tracking_source=typeahead_search_direct&search=ипотека%20mortgage
 - Посмотреть дизайны Ипотеки на бихайнс
 - Калькулятор
+- История
+- Блог (WP)
+- Таблицы и графики
 - CJM  от поиска до покупки 
 - Часто задаваемые вопросы 
 - Список документов 
