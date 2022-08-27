@@ -4,6 +4,25 @@
 
 ![image](https://user-images.githubusercontent.com/71700914/186831919-dc6f3e0a-bb29-40d3-b05c-dba840d9bb3d.png)
 
+### новое 
+
+- Тут авторизоваться https://stackblitz.com/ и взять grid сетку для рута
+Общие концепции lime-house
+1. Одинаковый UI визуально
+2. Главная страница -root с routers
+3. Микрофронт с routers, store
+4. Глобальный store, routers на все микрофронты
+
+
+https://docs.mapbox.com
+
+https://docs.mapbox.com/help/glossary/access-token/
+
+https://soal.github.io/vue-mapbox/api/Layers/videolayer.html#props
+
+Можно сервис с 3 д картами или просто картами вывести где Банки какие 
+
+иконки можно гифки сделать 
 
 ### Примеры дизайна
 - https://www.behance.net/gallery/70227549/lichnyj-kabinet-klienta-smp-banka-razdel-ipoteki
