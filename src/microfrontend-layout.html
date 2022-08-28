@@ -1,133 +1,76 @@
 <single-spa-router>
-  <!--
-    This is the single-spa Layout Definition for your microfrontends.
-    See https://single-spa.js.org/docs/layout-definition/
-  -->
-
-  <!-- Example layouts you might find helpful:
-
-  <nav>
-    <application name="@org/navbar"></application>
-  </nav>
-  <route path="settings">
-    <application name="@org/settings"></application>
-  </route>
-  -->
 
   <main class="root-wrapper">
     <route default>
-      <div style="margin: 15px;"  class="br">title app</div>
-      <div class="wrapper" style="padding: 15px; background: #f8f8f6;">
-        <div class="row-1" style="display: flex;">
-
-          <a
-                  href="/test"
-                  class="br"
-                  style="
-            padding: 15px;
-            background: #ffffff;
-            width: 30%;
-            margin: 15px;
-            height: 450px;
-            background-image: url('https://avatars.mds.yandex.net/get-adfox-content/2804317/220711_adfox_1643034_5452200_3.bf3c739adc6a52d4ab86eceafcf24fd4.webp/optimize.webp');
-            background-repeat: no-repeat;
-            background-position: bottom;
-            background-size: contain;
-          "
-          >
-            Ипотека на квартиру
+        <header class="header">
+            <div>LOGO</div>
+            <div>Profile</div>
+        </header>
+      <div class="grid-wrapper">
+          <a href="#" class="bg ss br">
+              Критерии по выбору недвижимости в Ипотеку
           </a>
+        <div class="bg-1 bg ss">
 
-          <div style="display: flex; flex-direction: column; width: 70%;">
-            <div style="display: flex;">
-              <a
-                      href="#"
-                      class="br"
-                      style="
-                background: #ffffff;
-                width: 50%;
-                margin: 15px;
-                height: 210px;
-              "
-              >
-                11
-              </a>
-              <a
-                      href="#"
-                      class="br"
-                      style="
-                background: #ffffff;
-                width: 50%;
-                margin: 15px;
-                height: 210px;
-              "
-              >
-                22
-              </a>
-            </div>
-            <a
-                    href="#"
-                    class="br"
-                    style="background: #ffffff; margin: 15px; height: 210px;"
-            >
-              1
-            </a>
-          </div>
         </div>
-        <div class="row-2" style="margin-top: 25px; display: flex;">
-          <div style="display: flex; flex-direction: column; width: 70%;">
-            <div style="display: flex;">
-              <a
-                      href="#"
-                      class="br"
-                      style="
-                background: #ffffff;
-                width: 50%;
-                margin: 15px;
-                height: 210px;
-              "
-              >
-                11
-              </a>
-              <a
-                      href="#"
-                      class="br"
-                      style="
-                background: #ffffff;
-                width: 50%;
-                margin: 15px;
-                height: 210px;
-              "
-              >
-                22
-              </a>
-            </div>
-            <a
-                    href="#"
-                    class="br"
-                    style="background: #ffffff; margin: 15px; height: 210px;"
-            >
-              1
-            </a>
-          </div>
-
-          <a
-                  href="#"
-                  class="br"
-                  style="background: #ffffff; width: 30%; margin: 15px; height: 450px;"
-          >
-            1
+          <a href="/test" class="tall bg bg-plan ss">
+              Критерии по выбору недвижимости в Ипотеку
           </a>
+        <div class="wide bg">
+        2
         </div>
+        <div class="bg">
+        2
+        </div>
+        <div class="tall bg">
+     ss
+        </div>
+        <div class="big bg">
+        ss
+        </div>
+        <div class="bg">
+       ss
+        </div>
+        <div class="wide bg">
+       ss
+        </div>
+        <div class="big bg">
+       qq
+        </div>
+        <div class="tall bg">
+       22
+        </div>
+        <div class="bg">
+       2
+        </div>
+        <div class="bg">
+        2
+        </div>
+        <div class="bg 22">
+         2
+        </div>
+        <div class="ss">
+<!--            <img-->
+<!--                src="../../src/bg-1.jpg"-->
+<!--                alt=""-->
+<!--            />-->
+        </div>
+        <div class="wide">
+          <img
+                  src="https://avatars.mds.yandex.net/get-adfox-content/2804317/220428_adfox_1385932_5164627_4.40ed580db0a1613f2d0f9a78fede82ea.webp/optimize.webp"
+                  alt=""
+          />
+        </div>
+
+
+
+
       </div>
     </route>
     <route path="/test">
       <application name="@app/react"></application>
       <application name="@core/ipoteka"></application>
     </route>
-
-
-
   </main>
-  "prepare": "husky install",
+
 </single-spa-router>
