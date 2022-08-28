@@ -107,7 +107,7 @@ const downloadPDF =  () => {
 }
 
 .title {
-  margin-top: -125px;
+  /*margin-top: -125px;*/
   text-align: center;
   padding: 25px;
   background: #08a652;

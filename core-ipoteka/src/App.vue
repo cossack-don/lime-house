@@ -40,7 +40,7 @@
         PDF файл сгенерирован и скачался на ваш девайс!
       </div>
     </Transition>
-    <HeaderHouses/>
+<!--    <HeaderHouses/>-->
     <Form/>
     <Cards/>
   </div>

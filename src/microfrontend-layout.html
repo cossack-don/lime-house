@@ -2,9 +2,9 @@
 
   <main class="root-wrapper">
     <route default>
-        <header class="header">
+        <header class="header animation">
             <a href="/" class="logo"><h2>Lime House</h2></a>
-            <div>Profile</div>
+            <div class="user"></div>
         </header>
 
       <div class="grid-wrapper">
@@ -60,8 +60,12 @@
     </route>
 
     <route path="/test">
+        <header class="header animation">
+            <a href="/" class="logo"><h2>Lime House</h2></a>
+            <div class="user"></div>
+        </header>
+      <application name="@core/ipoteka" ></application>
       <application name="@app/react"></application>
-      <application name="@core/ipoteka"></application>
     </route>
   </main>
 
