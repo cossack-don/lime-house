@@ -11,10 +11,10 @@
           <a href="#" class="bg bg-1">
             1
           </a>
-        <a class="bg bg-2" href="#">
-            2
+        <a class="bg bg-2" href="/calc">
+            Калькулятор Ипотеки
         </a>
-        <a href="/test" class="tall bg bg-3">
+        <a href="/property-characteristics" class="tall bg bg-3">
               Критерии по выбору недвижимости в Ипотеку
         </a>
         <a href="#" class="wide bg bg-4">
@@ -59,14 +59,21 @@
       </div>
     </route>
 
-    <route path="/test">
+    <route path="/property-characteristics">
         <header class="header animation">
             <a href="/" class="logo"><h2>Lime House</h2></a>
             <div class="user"></div>
         </header>
       <application name="@core/ipoteka" ></application>
-      <application name="@app/react"></application>
     </route>
+
+      <route path="/calc">
+          <header class="header animation">
+              <a href="/" class="logo"><h2>Lime House</h2></a>
+              <div class="user"></div>
+          </header>
+          <application name="@app/react"></application>
+      </route>
   </main>
 
 </single-spa-router>

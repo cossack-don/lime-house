@@ -158,8 +158,8 @@ body {
 
 .bg-2 {
   background-image: url("../assets/bg-calc.webp");
-  background-size: contain;
-  background-position: bottom;
+  background-size: 65%;
+  background-position-y: 260%;
 }
 
 .bg-3 {
