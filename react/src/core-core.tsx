@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import singleSpaReact from "single-spa-react";
+import 'antd/dist/antd.css';
 import Root from "./root.component";
 
 const lifecycles = singleSpaReact({
