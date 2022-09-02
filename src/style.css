@@ -24,7 +24,7 @@ body {
   height: 30px;
   display: flex;
   align-items: center;
-  background-image: url("../assets/lime.svg");
+  background-image: url("assets/lime.svg");
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
@@ -37,7 +37,7 @@ body {
   height: 30px;
   display: flex;
   align-items: center;
-  background-image: url("../assets/user.svg");
+  background-image: url("assets/user.svg");
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
@@ -151,88 +151,88 @@ body {
 }
 
 .bg-1 {
-  background-image: url("../assets/bg-12.webp");
+  background-image: url("assets/bg-12.webp");
   background-size: contain;
   background-position: bottom;
 }
 
 .bg-2 {
-  background-image: url("../assets/bg-calc.webp");
+  background-image: url("assets/bg-calc.webp");
   background-size: 65%;
   background-position-y: 260%;
 }
 
 .bg-3 {
-  background-image: url("../assets/bg-plan.webp");
+  background-image: url("assets/bg-plan.webp");
   background-size: contain;
   background-position: bottom;
 }
 
 .bg-4 {
-  background-image: url("../assets/bg-11.webp");
+  background-image: url("assets/bg-11.webp");
   background-size: contain;
   background-position: center;
 }
 
 .bg-5 {
-  background-image: url("../assets/bg-5.webp");
+  background-image: url("assets/bg-5.webp");
   background-size: contain;
   background-position: bottom;
 }
 
 .bg-6 {
-  background-image: url("../assets/bg-1.webp");
+  background-image: url("assets/bg-1.webp");
   background-size: contain;
   background-position: bottom;
 }
 
 .bg-7 {
-  background-image: url("../assets/bg-16.webp");
+  background-image: url("assets/bg-16.webp");
   background-size: cover;
   background-position: bottom;
 }
 
 .bg-8 {
-  background-image: url("../assets/bg-14.webp");
+  background-image: url("assets/bg-14.webp");
   background-size: contain;
 }
 
 .bg-9 {
-  background-image: url("../assets/bg-13.webp");
+  background-image: url("assets/bg-13.webp");
   background-size: contain;
 }
 
 .bg-10 {
-  background-image: url("../assets/bg.png");
+  background-image: url("assets/bg.png");
   background-size: contain;
 }
 
 .bg-11 {
-  background-image: url("../assets/bg-1.jpg");
+  background-image: url("assets/bg-1.jpg");
   background-size: contain;
 }
 
 .bg-12 {
-  background-image: url("../assets/bg.png");
+  background-image: url("assets/bg.png");
   background-size: contain;
 }
 
 .bg-13 {
-  background-image: url("../assets/bg.png");
+  background-image: url("assets/bg.png");
   background-size: contain;
 }
 
 .bg-14 {
-  background-image: url("../assets/bg.png");
+  background-image: url("assets/bg.png");
   background-size: contain;
 }
 
 .bg-15 {
-  background-image: url("../assets/bg.png");
+  background-image: url("assets/bg.png");
   background-size: contain;
 }
 
 .bg-16 {
-  background-image: url("../assets/bg.png");
+  background-image: url("assets/bg.png");
   background-size: contain;
 }
