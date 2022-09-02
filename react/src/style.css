@@ -1,0 +1,26 @@
+body {
+    background: #91b3fa;
+}
+
+.steps-content {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 400px;
+}
+
+.steps-action {
+    margin-top: 24px;
+}
+
+.wrapper-road-mortgage {
+    display: flex;
+}
+
+.steps {
+    width: 20%;
+}
+
+.description {
+    width: 80%;
+}
