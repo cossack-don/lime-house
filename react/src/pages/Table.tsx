@@ -1,18 +1,13 @@
-import { Table, Tag } from 'antd';
+import { Table } from 'antd';
 import React from 'react';
 
-
-
-
-
 const table = (props) => {
-
     return (
-            <Table
-                columns={props.columns}
-                pagination={false}
-                dataSource={props.data}
-            />
+        <Table
+            columns={props.columns}
+            pagination={false}
+            dataSource={props.data}
+        />
     );
 };
 

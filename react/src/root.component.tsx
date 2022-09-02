@@ -1,46 +1,28 @@
-import {Button, message, Steps, Comment, Tag} from 'antd';
+import {Button, message, Steps, Tag} from 'antd';
 import React, { useState } from 'react';
 import { steps } from "./pages/dataSteps";
 import './style.css';
 import Table from './pages/Table'
+
 const { Step } = Steps;
+const columns = [
+    {
+        title: 'Название',
+        dataIndex: 'name',
+        key: 'name',
+    },
 
-
-
-const Root: React.FC = () => {
-    const [current, setCurrent] = useState(0);
-
-    const next = () => {
-        setCurrent(current + 1);
-    };
-
-    const prev = () => {
-        setCurrent(current - 1);
-    };
-
-
-    const onChange = (value: number) => {
-        setCurrent(value);
-    };
-
-    const columns = [
-        {
-            title: 'Название',
-            dataIndex: 'name',
-            key: 'name',
-        },
-
-        {
-            title: 'Описание',
-            dataIndex: 'address',
-            key: 'address',
-        },
-        {
-            title: 'Приоритет',
-            key: 'tags',
-            dataIndex: 'tags',
-            render: (tags) => (
-                <span>
+    {
+        title: 'Описание',
+        dataIndex: 'description',
+        key: 'description',
+    },
+    {
+        title: 'Приоритет',
+        key: 'tags',
+        dataIndex: 'tags',
+        render: (tags) => (
+            <span>
         {tags.map((tag) => {
             let color = "Низкий"
 
@@ -61,9 +43,26 @@ const Root: React.FC = () => {
             );
         })}
       </span>
-            ),
-        },
-    ];
+        ),
+    },
+];
+
+const Root: React.FC = () => {
+    const [current, setCurrent] = useState(0);
+
+    const next = () => {
+        setCurrent(current + 1);
+    };
+
+    const prev = () => {
+        setCurrent(current - 1);
+    };
+
+    const onChange = (value: number) => {
+        setCurrent(value);
+    };
+
+
     return (
         <>
             <section className="wrapper-road-mortgage">
@@ -94,19 +93,13 @@ const Root: React.FC = () => {
 
                 <div className='description'>
                     <article className="steps-content">
-                        <h3>Шаг - {steps[current].content}</h3>
+                        <h3>Шаг - {steps[current].title}</h3>
                         <hr/>
                         <Table data={steps[current].data} columns={columns}/>
                         <div>Описание доп</div>
                     </article>
                 </div>
             </section>
-
-
-
-
-
-
         </>
     );
 };

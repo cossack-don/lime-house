@@ -1,31 +1,26 @@
 import { IStep } from './interfaces/IStep';
-import {Tag} from "antd";
-import React from "react";
-// :IStep[]
-export const steps = [
+
+export const steps:IStep[] = [
     {
         title: 'Доход, риски',
-        content: 'First-content 1',
+        content: 'Доход, риски',
         data: [
             {
                 key: '1',
                 name: 'John Brown',
-                age: 32,
-                address: 'New York No. 1 Lake Park',
+                description: 'New York Noss. 1 Lake Park',
                 tags: ['Средний', 'Пример'],
             },
             {
                 key: '2',
                 name: 'Jim Green',
-                age: 42,
-                address: 'London No. 1 Lake Park',
+                description: 'London No. 1 Lake Park',
                 tags: ['Высокий'],
             },
             {
                 key: '3',
                 name: 'Joe Black',
-                age: 32,
-                address: 'Sidney No. 1 Lake Park',
+                description: 'Sidney No. 1 Lake Park',
                 tags: ['Низкий'],
             },
         ],
@@ -37,43 +32,22 @@ export const steps = [
             {
                 key: '1',
                 name: 'John Brown',
-                age: 32,
-                address: 'New York No. 1 Lake Park',
+                description: 'New York No. 1 Lake Park',
                 tags: ['Высокий', 'Пример'],
             },
             {
                 key: '2',
                 name: 'Jim Green',
-                age: 42,
-                address: 'London No. 1 Lake Park',
+                description: 'London No. 1 Lake Park',
                 tags: ['Высокий'],
             },
             {
                 key: '3',
                 name: 'Joe Black',
-                age: 32,
-                address: 'Sidney No. 1 Lake Park',
+                description: 'Sidney No. 1 Lake Park',
                 tags: ['Высокий'],
             },
         ],
-        columns:[
-            {
-                title: 'Name',
-                dataIndex: 'name',
-                key: 'name',
-            },
-            {
-                title: 'Age',
-                dataIndex: 'age',
-                key: 'age',
-            },
-            {
-                title: 'Address',
-                dataIndex: 'address',
-                key: 'address',
-            },
-
-        ]
     },
     {
         title: 'Критерии квартиры',
