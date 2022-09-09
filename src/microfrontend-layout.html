@@ -11,7 +11,7 @@
           <a href="#" class="bg bg-1">
             1
           </a>
-        <a class="bg bg-2" href="/calc">
+        <a class="bg bg-2 dd" href="/calc">
             Калькулятор Ипотеки
         </a>
         <a href="/property-characteristics" class="tall bg bg-3">
@@ -67,7 +67,7 @@
       <application name="@core/ipoteka" ></application>
     </route>
 
-      <route path="/calc">
+      <route path="/calc" onclick="(e) => e.preventDefault()">
           <header class="header animation">
               <a href="/" class="logo"><h2>Lime House</h2></a>
               <div class="user"></div>
@@ -75,5 +75,5 @@
           <application name="@app/react"></application>
       </route>
   </main>
-
 </single-spa-router>
+
