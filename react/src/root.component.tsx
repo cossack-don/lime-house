@@ -96,7 +96,10 @@ const Root: React.FC = () => {
                         <h3>Шаг - {steps[current].title}</h3>
                         <hr/>
                         <Table data={steps[current].data} columns={columns}/>
-                        <div>Описание доп</div>
+                        <div className='extra-description'>
+                            <h3>Дополнительное описание</h3>
+                            <p>Text</p>
+                        </div>
                     </article>
                 </div>
             </section>

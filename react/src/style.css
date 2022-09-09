@@ -24,3 +24,7 @@ body {
 .description {
     width: 80%;
 }
+
+.extra-description {
+    padding: 16px;
+}
