@@ -37,20 +37,20 @@ export const steps:IStep[] = [
         data: [
             {
                 key: '1',
-                name: 'John Brown',
-                description: 'New York No. 1 Lake Park',
-                tags: ['Высокий', 'Пример'],
+                name: 'Сколько будет первоначальный взнос',
+                description: '10% - 800 000 руб',
+                tags: ['Высокий'],
             },
             {
                 key: '2',
-                name: 'Jim Green',
-                description: 'London No. 1 Lake Park',
+                name: 'Сколько останется отдавать',
+                description: 'Text',
                 tags: ['Высокий'],
             },
             {
                 key: '3',
-                name: 'Joe Black',
-                description: 'Sidney No. 1 Lake Park',
+                name: 'Общая стоимость ипотеки',
+                description: 'Например 8 000 000 руб',
                 tags: ['Высокий'],
             },
         ],
