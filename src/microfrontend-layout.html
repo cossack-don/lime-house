@@ -67,13 +67,18 @@
       <application name="@core/ipoteka" ></application>
     </route>
 
-      <route path="/calc" onclick="(e) => e.preventDefault()">
+      <route path="/calc">
           <header class="header animation">
               <a href="/" class="logo"><h2>Lime House</h2></a>
               <div class="user"></div>
           </header>
           <application name="@app/react"></application>
       </route>
+      <route path="/angular">
+          angular - test
+          <application name="angular"></application>
+      </route>
+
   </main>
 </single-spa-router>
 
