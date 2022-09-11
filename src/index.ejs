@@ -51,7 +51,7 @@
         "@app/react": "http://localhost:8000/core-core.js",
         "@app/root-config": "//localhost:9000/app-root-config.js",
         "@core/ipoteka": "//localhost:8080/js/app.js",
-        "angular": "//localhost:4200/main.js"
+        "@app/angular": "//localhost:4200/main.js"
 
       }
     }
@@ -62,7 +62,8 @@
     If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
     Learn more about why at https://single-spa.js.org/docs/ecosystem-angular/#zonejs
   -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script> -->
+<!--  FOR ANGULAR APPS  -->
+  <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
   <% if (isLocal) { %>
